@@ -3,7 +3,7 @@ import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_POST, LOADING } from "../../utils/actions";
 import API from "../../utils/API";
 
-import CalendarImg from '../calendar_img';
+import CalendarImg from '../Calendar/calendar_img';
 import Calendar from "../../img/calendar.jpg";
 
 function CreatePostForm() {
@@ -34,15 +34,17 @@ function CreatePostForm() {
 
   return (
     <div>
+      <div className="jumbotron">
         <CalendarImg image={Calendar}
         />
-      <h1>Create a blog post</h1>
-      <form className="form-group mt-5 mb-5" onSubmit={handleSubmit}>
-        <input className="form-control mb-5" required ref={titleRef} placeholder="Title" />
-        <textarea className="form-control mb-5" required ref={bodyRef} placeholder="Body" />
-        <input className="form-control mb-5" ref={authorRef} placeholder="Screen name" />
-        <button className="btn btn-success mt-3 mb-5" disabled={state.loading} type="submit">
-          Save Post
+      </div>
+      <h3>Add New Item to Schedule</h3>
+      <form className="form-group mt-3 mb-3" onSubmit={handleSubmit}>
+        <input className="form-control mb-3" required ref={titleRef} placeholder="Title" />
+        <textarea className="form-control mb-3" required ref={bodyRef} placeholder="Body" />
+        <input className="form-control mb-3" ref={authorRef} placeholder="Name" />
+        <button className="btn btn-success mt-3 mb-3" disabled={state.loading} type="submit">
+          Add to Calendar
         </button>
       </form>
     </div>

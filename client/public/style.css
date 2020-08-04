@@ -1,0 +1,7 @@
+.jumbotron {
+    background-color: green;
+    padding: 1rem;
+    /* max-height: 70%;
+    max-width: 70%; */
+    text-align: center;
+}
