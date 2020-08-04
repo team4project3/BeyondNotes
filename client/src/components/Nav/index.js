@@ -12,8 +12,7 @@ function Nav() {
   return (
     <nav>
       <div className="nav-wrapper">
-        <NavLogo image={NavbarLogo}
-        />
+        <NavLogo/>
         {store.loading ? <a className="navbar-brand ml-auto">Loading...</a> : <></>}
       </div>
     </nav>

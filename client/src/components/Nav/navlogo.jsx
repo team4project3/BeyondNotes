@@ -4,20 +4,20 @@ function NavLogo(props) {
 
     return (
         <>
-            <a href="#">            
+            <a href="#"> BeyondNotes           
             <img
-                className="brand-logo navlogo"
-                src={props.image}
-                alt="navbarImage"
+                // className="brand-logo navlogo"
+                // src={props.image}
+                // alt="navbarImage"
             /></a>
 
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="sass.html">Sass</a></li>
-                <li><a href="badges.html">Components</a></li>
-                <li><a href="collapsible.html">JavaScript</a></li>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
             </ul>
 
-             BeyondNotes
+
         </>
     )
 };

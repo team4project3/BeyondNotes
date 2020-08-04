@@ -7,10 +7,11 @@
     max-height: 80%;
     max-width: 80%
 }
-/* Navbar */
-.navlogo {
-    max-width: 5%;
-    max-height: 5%;
-    min-width: 5%;
-    min-height: 5%;
+
+nav {
+    background-color: rgba(0, 0, 0, .5);
 }
+
+/* .navbar-material .nav-wrapper .brand-logo img {
+    color: rgba(0, 0, 0, .5);
+} */
