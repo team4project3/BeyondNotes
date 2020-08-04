@@ -5,3 +5,18 @@
     max-width: 70%; */
     text-align: center;
 }
+
+/* Dashboard */
+
+.dashboard-title {
+    text-align: center;
+}
+
+/* Navbar */
+
+.navlogo {
+    max-width: 5%;
+    max-height: 5%;
+    min-width: 5%;
+    min-height: 5%;
+}
