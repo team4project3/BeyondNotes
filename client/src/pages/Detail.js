@@ -50,17 +50,17 @@ const Detail = props => {
           </Col>
           {state.favorites.indexOf(state.currentPost) !== -1 ? (
             <button className="btn btn-danger" onClick={removeFavorite}>
-                Remove from Favorites!
+                Remove from Important Items
             </button>
           ) : (
             <button className="btn" onClick={addFavorite}>
-                ❤️ Add to Favorites
+                ❤️ Add as Important
             </button>
           )}
         </Row>
         <Row>
           <Col size="md-2">
-            <Link to="/">← Back to Posts</Link>
+            <Link to="/">← Back to Dashboard</Link>
           </Col>
         </Row>
       </Container>

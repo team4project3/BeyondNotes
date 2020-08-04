@@ -42,7 +42,7 @@ const FavoritesList = () => {
           ))}
         </List>
       ) : (
-        <h3 className="text-center">Your schedule is clear for now! </h3>
+        <h3 className="text-center">Your schedule is clear for now. </h3>
       )}
       <div className="mt-5">
         <Link to="home">Back to home</Link>

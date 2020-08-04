@@ -39,7 +39,7 @@ function PostsList() {
   return (
     <div>
       <h1 className="dashboard-title">Dashboard</h1>
-      <h3 className="mb-5 mt-5">Click on a note to view</h3>
+      <h3 className="dashboardH3">Click on a note to view</h3>
       {state.posts.length ? (
         <List>
           {state.posts.map(post => (
@@ -54,9 +54,9 @@ function PostsList() {
           ))}
         </List>
       ) : (
-        <h3>You haven't added any notes yet!</h3>
+        <h3 className="dashboardH3">You haven't added any notes yet.</h3>
       )}
-      <div className="mt-5">
+      <div className="mt-5 viewImportant">
         <Link to="favorites">View Important Items</Link>
       </div>
     </div>
