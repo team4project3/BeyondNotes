@@ -65,7 +65,7 @@ const Detail = props => {
         </Row>
       </Container>
     ) : (
-      <div>loading...</div>
+      <div>Test</div>
     )}</>
   );
 };

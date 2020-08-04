@@ -3,6 +3,9 @@ import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_POST, LOADING } from "../../utils/actions";
 import API from "../../utils/API";
 
+import CalendarImg from '../calendar_img';
+import Calendar from "../../img/calendar.jpg";
+
 function CreatePostForm() {
   const titleRef = useRef();
   const bodyRef = useRef();
@@ -31,12 +34,8 @@ function CreatePostForm() {
 
   return (
     <div>
-      <div className="jumbotron">
-        <img
-          className="img-fluid img-thumbnail"
-          src="https://images.pexels.com/photos/459688/pexels-photo-459688.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        <CalendarImg image={Calendar}
         />
-      </div>
       <h1>Create a blog post</h1>
       <form className="form-group mt-5 mb-5" onSubmit={handleSubmit}>
         <input className="form-control mb-5" required ref={titleRef} placeholder="Title" />
