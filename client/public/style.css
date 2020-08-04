@@ -1,19 +1,13 @@
-.jumbotron {
-    background-color: green;
-    padding: 1rem;
-    /* max-height: 70%;
-    max-width: 70%; */
-    text-align: center;
-}
-
 /* Dashboard */
-
 .dashboard-title {
     text-align: center;
 }
 
+.calendarImage {
+    max-height: 80%;
+    max-width: 80%
+}
 /* Navbar */
-
 .navlogo {
     max-width: 5%;
     max-height: 5%;

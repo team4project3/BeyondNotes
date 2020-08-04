@@ -29,7 +29,7 @@ const FavoritesList = () => {
       <h1 className="text-center">Important Items:</h1>
       {state.favorites.length ? (
         <List>
-          <h3 className="mb-5 mt-5">Click on a post to view in detail</h3>
+          <h3 className="mb-5 mt-5">Click on an item to view in detail</h3>
           {state.favorites.map(post => (
             <ListItem key={post._id}>
               <Link to={"/posts/" + post._id}>

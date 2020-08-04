@@ -5,15 +5,17 @@ import NavLogo from '../Nav/navlogo';
 import NavbarLogo from "../../img/papernote.png"
 
 
-
+// converted from Bootstrap to Materialize
 function Nav() {
   const [store] = useStoreContext();
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <NavLogo image={NavbarLogo}
-      />
-      {store.loading ? <a className="navbar-brand ml-auto">Loading...</a> : <></>}
+    <nav>
+      <div className="nav-wrapper">
+        <NavLogo image={NavbarLogo}
+        />
+        {store.loading ? <a className="navbar-brand ml-auto">Loading...</a> : <></>}
+      </div>
     </nav>
   );
 }
