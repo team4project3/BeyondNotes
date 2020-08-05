@@ -7,7 +7,6 @@ import React, {  useEffect, useState } from 'react';
 import { Image } from 'cloudinary-react';
 
 
-
 export default function SideNavBar (){
   const [imageIds, setImageIds] = useState();
   const loadImages = async () => {
@@ -35,7 +34,7 @@ export default function SideNavBar (){
   
     return (
       <div>
-        <nav> {/* navbar content here  */} </nav>
+        <nav> <Link to="/upload">Upload</Link> </nav>
           <ul id="slide-out" className="sidenav">
             <li>
               <div className="user-view">

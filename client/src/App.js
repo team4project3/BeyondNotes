@@ -6,6 +6,8 @@ import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import { StoreProvider } from "./utils/GlobalState";
 import FavoritesList from "./pages/FavoritesList";
+import Upload from './pages/Upload.js';
+import SideNavBar from "./pages/SideNavBar.js";
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
             <Route exact path="/home" component={Home} />
             <Route exact path="/favorites" component={FavoritesList} />
             <Route exact path="/posts/:id" component={Detail} />
+            <Route component={SideNavBar} path="/main" />
             <Route component={Upload} path="/upload" />
             <Route component={NoMatch} />
           </Switch>
