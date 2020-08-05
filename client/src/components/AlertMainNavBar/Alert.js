@@ -1,3 +1,5 @@
+//this file is connected to ./pages/SideNavBar
+
 import React, { useState, useEffect } from 'react';
 
 export default function Alert({ msg, type }) {

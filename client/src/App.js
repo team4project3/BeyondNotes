@@ -18,6 +18,7 @@ function App() {
             <Route exact path="/home" component={Home} />
             <Route exact path="/favorites" component={FavoritesList} />
             <Route exact path="/posts/:id" component={Detail} />
+            <Route component={Upload} path="/upload" />
             <Route component={NoMatch} />
           </Switch>
         </StoreProvider>
