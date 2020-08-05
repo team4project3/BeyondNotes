@@ -14,13 +14,13 @@ function App() {
     <Router>
       <div>
         <StoreProvider>
-          <Nav />
+          {/* <Nav /> */}
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/home" component={Home} />
+            <Route exact path="/" component={SideNavBar} />
+            {/* <Route exact path="/home" component={Home} /> */}
             <Route exact path="/favorites" component={FavoritesList} />
             <Route exact path="/posts/:id" component={Detail} />
-            <Route component={SideNavBar} path="/main" />
+            <Route component={SideNavBar} path="/SideNavBar" />
             <Route component={Upload} path="/upload" />
             <Route component={NoMatch} />
           </Switch>

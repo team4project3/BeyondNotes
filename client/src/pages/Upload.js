@@ -1,6 +1,6 @@
 //this file is connected to ./pages/SideNavBar
 import React, { useState } from 'react';
-import Alert from '../components/Alert';
+import Alert from '../components/AlertMainNavBar';
 
 
 export default function Upload() {

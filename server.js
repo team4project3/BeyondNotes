@@ -1,6 +1,6 @@
 //reference to dependecies
 const { cloudinary } = require('./utils/cloudinary');
-const express = require('express');
+// const express = require('express');
 const app = express();
 var cors = require('cors');
 

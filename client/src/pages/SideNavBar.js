@@ -5,22 +5,23 @@ import M from 'materialize-css'
 import 'material-icons/css/material-icons.scss';
 import React, {  useEffect, useState } from 'react';
 import { Image } from 'cloudinary-react';
+import Upload from './Upload.js';
 
 
 export default function SideNavBar (){
-  const [imageIds, setImageIds] = useState();
-  const loadImages = async () => {
-      try {
-          const res = await fetch('/api/images');
-          const data = await res.json();
-          setImageIds(data);
-      } catch (err) {
-          console.error(err);
-      }
-  };
-  useEffect(() => {
-      loadImages();
-  }, []);
+  // const [imageIds, setImageIds] = useState();
+  // const loadImages = async () => {
+  //     try {
+  //         const res = await fetch('/api/images');
+  //         const data = await res.json();
+  //         setImageIds(data);
+  //     } catch (err) {
+  //         console.error(err);
+  //     }
+  // };
+  // useEffect(() => {
+  //     loadImages();
+  // }, []);
   
   useEffect(() => {
     
@@ -34,13 +35,13 @@ export default function SideNavBar (){
   
     return (
       <div>
-        <nav> <Link to="/upload">Upload</Link> </nav>
+        <nav> <a href="/upload" class="active">Upload</a> </nav>
           <ul id="slide-out" className="sidenav">
             <li>
               <div className="user-view">
                 <div className="background">
                   <img src="images/office.jpg" />
-                  {imageIds &&
+                  {/* {imageIds &&
                     imageIds.map((imageId, index) => (
                         <Image
                             key={index}
@@ -49,7 +50,7 @@ export default function SideNavBar (){
                             width="250"
                             crop="scale"
                         />
-                    ))}
+                    ))} */}
                 </div>
                 <a href="#user"><img className="circle" src="images/yuna.jpg" /></a>
                 <a href="#name"><span className="white-text name">John Doe</span></a>
