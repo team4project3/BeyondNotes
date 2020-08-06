@@ -4,7 +4,7 @@ function NavLogo(props) {
 
     return (
         <>
-            <a href="#"> BeyondNotes           
+            <a href="home"> BeyondNotes           
             <img
                 // className="brand-logo navlogo"
                 // src={props.image}
