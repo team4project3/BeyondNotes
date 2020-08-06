@@ -7,20 +7,22 @@ import Nav from "./components/Nav";
 import { StoreProvider } from "./utils/GlobalState";
 import FavoritesList from "./pages/FavoritesList";
 import Upload from './pages/Upload.js';
-import SideNavBar from "./pages/SideNavBar.js";
+import Gallery from './pages/Gallery.js';
 
 function App() {
   return (
     <Router>
       <div>
         <StoreProvider>
-          {/* <Nav /> */}
+          <Nav />
+          {/* <SideNavBar></SideNavBar> */}
           <Switch>
-            <Route exact path="/" component={SideNavBar} />
-            {/* <Route exact path="/home" component={Home} /> */}
+            <Route exact path="/" component={Home} />
+            <Route exact path="/home" component={Home} />
             <Route exact path="/favorites" component={FavoritesList} />
             <Route exact path="/posts/:id" component={Detail} />
-            <Route component={SideNavBar} path="/SideNavBar" />
+            <Route exact path="/gallery" component={Gallery} />
+            {/* <Route component={SideNavBar} path="/SideNavBar" /> */}
             <Route component={Upload} path="/upload" />
             <Route component={NoMatch} />
           </Switch>

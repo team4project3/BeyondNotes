@@ -1,6 +1,9 @@
 //reference to dependecies
-const { cloudinary } = require('./utils/cloudinary');
-// const express = require('express');
+const { cloudinary } = require('./client/src/utils/cloudinary');
+const express = require("express");
+
+const mongoose = require("mongoose");
+const routes = require("./routes");
 const app = express();
 var cors = require('cors');
 
@@ -30,11 +33,6 @@ app.post('/api/upload', async (req, res) => {
   }
 });
 
-const express = require("express");
-
-const mongoose = require("mongoose");
-const routes = require("./routes");
-const app = express();
 
 //set image upload size
 app.use(express.json({ limit: '50mb' }));
