@@ -2,7 +2,7 @@ import React from "react";
 import { useStoreContext } from "../../utils/GlobalState";
 
 import NavLogo from '../Nav/navlogo';
-import NavbarLogo from "../../img/papernote.png"
+// import NavbarLogo from "../../img/papernote.png"
 
 
 // converted from Bootstrap to Materialize
