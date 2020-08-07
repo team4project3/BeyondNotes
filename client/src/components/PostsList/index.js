@@ -59,6 +59,15 @@ function PostsList() {
       <div className="mt-5 viewImportant">
         <Link to="favorites">View Important Items</Link>
       </div>
+      <div className="mt-5 viewImportant">
+        <Link to="calendar">View Calendar</Link>
+      </div>
+      <div className="mt-5 viewImportant">
+        <Link to="register">Register</Link>
+      </div>
+      <div className="mt-5 viewImportant">
+        <Link to="login">Login In</Link>
+      </div>
     </div>
   );
 }
