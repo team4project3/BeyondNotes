@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 import { useStoreContext } from "../../utils/GlobalState";
 import { REMOVE_POST, UPDATE_POSTS, LOADING } from "../../utils/actions";
 import API from "../../utils/API";
-import PostIt from "../PostsList/postit.jpg"
+// import PostIt from "../PostsList/postit.jpg";
+import PenPaper from "../PostsList/penpaper.jpg";
 
 
 function PostsList() {
@@ -45,8 +46,8 @@ function PostsList() {
       <div class="card blue-grey darken-1 z-depth-4">
 
           <div class="card-image">
-            <img src={ PostIt }/>
-            <span class="card-title">To Do:</span>
+            <img src={ PenPaper }/>
+            <span class="card-title">Test Text</span>
           </div>
 
           <div class="card-content">
@@ -65,7 +66,7 @@ function PostsList() {
                   ))}
                 </List>
               ) : (
-                <h4 className="dashboardH3">Your agenda is clear for now.</h4>
+                <h4 className="dashboardH3">Test</h4>
               )}
           </div>
 
