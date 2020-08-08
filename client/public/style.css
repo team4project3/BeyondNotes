@@ -5,12 +5,16 @@
 .dashboardH3 {
     text-align: center;
 }
-.viewImportant {
-    text-align: right;
+.homeList {
+    text-align: left;
+    padding: 16px, 16px, 16px, 16px;
+    color: white;
 }
 
-.homeList {
-padding: 16px, 16px, 16px, 16px;
+/* Card Title */
+.card-title {
+    font-size: 50px;
+    color: black;
 }
 
 

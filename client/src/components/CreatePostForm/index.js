@@ -42,49 +42,42 @@ function CreatePostForm() {
       </div> */}
 
       {/* Add notes/activity */}
-      <div class="card blue-grey darken-1">
+      <div class="card blue-grey darken-1 z-depth-3">
         <div class="card-content white-text">
-          <span class="card-title">Add Item to Agenda</span>
+          <span class="card-title">Add to your Agenda</span>
           <form className="form-group mt-3 mb-3" onSubmit={handleSubmit}>
             <input className="form-control mb-3" required ref={titleRef} placeholder="Title" />
             <textarea className="form-control mb-3" required ref={bodyRef} placeholder="Body" />
             <input className="form-control mb-3" ref={authorRef} placeholder="Name" />
 
-            <div class="card-action">
               <button className="btn btn-success mt-3 mb-3" disabled={state.loading} type="submit">
                 Add
-          </button>
-            </div>
+              </button>
           </form>
         </div>
       </div>
 
       {/* Links to other pages? */}
-      <div class="card blue-grey darken-1">
+      <div class="card blue-grey darken-1 z-depth-3">
         <div class="card-content white-text">
-          <span class="card-title">Other Items</span>
-          <div class="card-action" onSubmit={handleSubmit}>
-
-                <button className="homeList btn btn-success mt-3 mb-3" disabled={state.loading} type="submit">
-                  <Link to="calendar">Calendar</Link>
-                </button>
-
-                <button className="homeList btn btn-success mt-3 mb-3" disabled={state.loading} type="submit">
-                  <Link to="favorites">Important Items</Link>
-                </button>
-
-                <button className="homeList btn btn-success mt-3 mb-3" disabled={state.loading} type="submit">
-                  <Link to="register">Register</Link>
-                </button>
-
-                <button className="homeList btn btn-success mt-3 mb-3" disabled={state.loading} type="submit">
-                  <Link to="login">Login In</Link>
-                </button>
-
+          <div class="card-action">
+            <div className="mt-5 homeList">
+              <Link to="favorites">View Important Items</Link>
+            </div>
+            <div className="mt-5 homeList">
+              <Link to="calendar">View Calendar</Link>
+            </div>
+            <div className="mt-5 homeList">
+              <Link to="register">Register</Link>
+            </div>
+            <div className="mt-5 homeList">
+              <Link to="login">Login In</Link>
+            </div>
           </div>
-          </div>
+
         </div>
       </div>
+    </div>
   );
 }
 

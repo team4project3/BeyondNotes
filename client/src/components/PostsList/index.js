@@ -42,15 +42,15 @@ function PostsList() {
 
   return (
     <div>
-      <div class="card">
+      <div class="card blue-grey darken-1 z-depth-4">
 
           <div class="card-image">
             <img src={ PostIt }/>
-            <span class="card-title">Card Title</span>
+            <span class="card-title">To Do:</span>
           </div>
 
           <div class="card-content">
-          <h3 className="dashboardH3">Click on a note to view</h3>
+          {/* <h4 className="dashboardH3">Click on a note to view</h4> */}
                 {state.posts.length ? (
                 <List>
                   {state.posts.map(post => (
@@ -65,7 +65,7 @@ function PostsList() {
                   ))}
                 </List>
               ) : (
-                <h3 className="dashboardH3">You haven't added any notes yet.</h3>
+                <h4 className="dashboardH3">Your agenda is clear for now.</h4>
               )}
           </div>
 
