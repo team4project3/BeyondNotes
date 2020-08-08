@@ -9,6 +9,7 @@ const Home = () => {
   return (
     <div className="container">
       <div className="row">
+        <h1 className="dashboard-title">Dashboard</h1>
         <div className="col m4 s6">
           <CreatePostForm />
         </div>

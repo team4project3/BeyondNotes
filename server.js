@@ -1,7 +1,6 @@
 //reference to dependecies
 const { cloudinary } = require('./client/src/utils/cloudinary');
 const express = require("express");
-
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
@@ -14,7 +13,7 @@ app.get('/api/images', async (req, res) => {
       .sort_by('public_id', 'desc')
       .max_results(5)
       .execute();
-//sends back an array of ID's to be tested on the front end (localhot:3001/api/images)
+//sends back an array of ID's to be tested on the front end (localhost:3001/api/images)
   const publicIds = resources.map((file) => file.public_id);
   res.send(publicIds);
 });
