@@ -9,6 +9,10 @@
     text-align: right;
 }
 
+.homeList {
+padding: 16px, 16px, 16px, 16px;
+}
+
 
 /* Calendar */
 .calendarImage {
