@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Detail from "./pages/Detail";
 import Calendar from "./pages/Calendar";
 import NoMatch from "./pages/NoMatch";
-import Nav from "./components/Nav";
+// import Nav from "./components/Nav";
 import { StoreProvider } from "./utils/GlobalState";
 import FavoritesList from "./pages/FavoritesList";
 import Upload from './pages/Upload.js';
@@ -22,8 +22,6 @@ function App() {
     <Router>
       <div>
         <StoreProvider>
-          <Header title={title}/>
-          <Nav />    
           <Switch>
             {/* <Route exact path="/" component={Home} /> */}
             <Route exact path="/home" component={Home} />

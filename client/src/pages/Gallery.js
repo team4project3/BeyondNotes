@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Image } from 'cloudinary-react';
+import Nav from "../components/Nav";
+
 
 export default function Gallery() {
     const [imageIds, setImageIds] = useState();
@@ -16,6 +18,8 @@ export default function Gallery() {
         loadImages();
     }, []);
     return (
+        <>
+        <Nav/>
         <div>
             <h1 className="title">Cloudinary Gallery</h1>
             <div className="gallery">
@@ -31,5 +35,6 @@ export default function Gallery() {
                     ))}
             </div>
         </div>
+    </>
     );
 }

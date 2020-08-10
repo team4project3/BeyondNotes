@@ -5,6 +5,8 @@ import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 import { useStoreContext } from "../utils/GlobalState";
 import { SET_CURRENT_POST, ADD_FAVORITE, REMOVE_FAVORITE } from "../utils/actions";
+import Nav from "../components/Nav";
+
 
 const Detail = props => {
   const [state, dispatch] = useStoreContext();
@@ -30,7 +32,9 @@ const Detail = props => {
   };
 
   return (
-    <>{state.currentPost ? (
+    <>
+    <Nav/>
+    {state.currentPost ? (
       <Container fluid>
         <Row>
           <Col size="md-12">

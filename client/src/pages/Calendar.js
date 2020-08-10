@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
 import withDragAndDrop from "react-big-calendar/lib/addons/dragAndDrop";
+import Nav from "../components/Nav";
+
 
 import "./calendar.css";
 import "react-big-calendar/lib/addons/dragAndDrop/styles.css";
@@ -38,18 +40,21 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <DnDCalendar
-          defaultDate={moment().toDate()}
-          defaultView="month"
-          events={this.state.events}
-          localizer={localizer}
-          onEventDrop={this.onEventDrop}
-          onEventResize={this.onEventResize}
-          resizable
-          style={{ height: "100vh"}}
-                  />
-      </div>
+      <>
+      <Nav/>
+        <div className="App">
+          <DnDCalendar
+            defaultDate={moment().toDate()}
+            defaultView="month"
+            events={this.state.events}
+            localizer={localizer}
+            onEventDrop={this.onEventDrop}
+            onEventResize={this.onEventResize}
+            resizable
+            style={{ height: "100vh"}}
+                    />
+        </div>
+      </>
     );
   }
 }

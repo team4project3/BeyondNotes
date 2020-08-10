@@ -3,10 +3,13 @@ import React from "react";
 import CreatePostForm from "../components/CreatePostForm";
 import PostsList from "../components/PostsList";
 // import CalendarView from "../pages/App";
+import Nav from "../components/Nav";
 
 
 const Home = () => {
   return (
+    <>
+    <Nav></Nav>
     <div className="container">
       <div className="row">
         {/* <h1 className="dashboard-title">Dashboard</h1> */}
@@ -18,7 +21,7 @@ const Home = () => {
         </div>
       </div>
     </div>
-
+</>
   );
 };
 
