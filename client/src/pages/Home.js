@@ -11,7 +11,11 @@ const Home = () => {
       <div className="row">
         {/* <h1 className="dashboard-title">Dashboard</h1> */}
         <div className="col m4 s6">
-          <CreatePostForm />
+          <div class="card blue-grey darken-1 z-depth-3">
+            <div class="card-content white-text">
+              <CreatePostForm />
+            </div>
+          </div>
         </div>
         <div className="col m8 s6">
           <PostsList />
