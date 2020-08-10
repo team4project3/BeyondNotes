@@ -21,6 +21,7 @@ function App() {
   return (
     <Router>
       <div>
+          
         <StoreProvider>
           <Header title={title}/>
           <Nav />    
