@@ -54,7 +54,7 @@ export default function SideNavBar (){
             </li>
             
             <li><div className="divider" /></li>
-            <li><NavTime></NavTime></li>
+            <li><p className="lead center align"><NavTime></NavTime></p></li>
             <li><div className="divider" /></li>
             <li><a href="/Home" className="active">Home</a></li>
             <li><a href="/upload" className="active">Upload</a> </li>        
