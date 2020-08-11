@@ -38,7 +38,7 @@ export default function SideNavBar (){
             <li><a href="/Home" className="active"><i class="material-icons">home</i>Home</a></li>
             <li><a href="/upload" className="active">Upload</a> </li>        
             <li><a href="/gallery" className="active">Gallery</a></li>
-            <li><a href="/logout"><i class="material-icons">rotate_left</i>Logout</a></li>
+            <li><a href="/login"><i class="material-icons">rotate_left</i>Logout</a></li>
           </ul>
           <a href="#" data-target="slide-out" className="sidenav-trigger"><i className="material-icons">menu</i></a>
       </div>
