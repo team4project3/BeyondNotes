@@ -3,26 +3,28 @@ import React from "react";
 import CreatePostForm from "../components/CreatePostForm";
 import PostsList from "../components/PostsList";
 // import CalendarView from "../pages/App";
-
+import BlueRidge from "../img/calendar.jpg"
 
 const Home = () => {
   return (
-    <div className="container">
-      <div className="row">
-        {/* <h1 className="dashboard-title">Dashboard</h1> */}
-        <div className="col m4 s6">
-          <div class="card blue-grey darken-1 z-depth-3">
-            <div class="card-content white-text">
-              <CreatePostForm />
+    <>
+      <div className="homeBackground">
+
+        <div className="row">
+          {/* <h1 className="dashboard-title">Dashboard</h1> */}
+          <div className="col m4 s6">
+            <div class="card blue-grey darken-1 z-depth-3">
+              <div class="card-content white-text">
+                <CreatePostForm />
+              </div>
             </div>
           </div>
-        </div>
-        <div className="col m8 s6">
-          <PostsList />
+          <div className="col m8 s6">
+            <PostsList />
+          </div>
         </div>
       </div>
-    </div>
-
+    </>
   );
 };
 
