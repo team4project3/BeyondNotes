@@ -8,27 +8,6 @@ import { Image } from 'cloudinary-react';
 
 
 export default function SideNavBar (){
-  // const [imageIds, setImageIds] = useState();
-  // const loadImages = async () => {
-  //     try {
-  //         const res = await fetch('/api/images');
-  //         const data = await res.json();
-  //         setImageIds(data);
-  //     } catch (err) {
-  //         console.error(err);
-  //     }
-  // };
-  // useEffect(() => {
-  //     loadImages();
-  // }, []);
-  
-  // useEffect(() => {
-    
-  //   document.addEventListener('DOMContentLoaded', function() {
-  //     var elems = document.querySelectorAll('.sidenav');
-  //     var instances = M.Sidenav.init(elems, {});
-  //   });
-  // }, []);
 
   document.addEventListener('DOMContentLoaded', function() {
         var elems = document.querySelectorAll('.sidenav');
@@ -39,7 +18,7 @@ export default function SideNavBar (){
   
     return (
       <div>
-        <nav> More Than Just A Note ...Beyond Notes!</nav>
+        <nav className="grey darken-2"> More Than Just A Note ...Beyond Notes!</nav>
           <ul id="slide-out" className="sidenav">
             <li>
               <div className="user-view">
