@@ -48,8 +48,8 @@ function PostsList() {
           <span class="card-title">Test Text</span>
         </div> */}
 
-      <div class="card blue-grey darken-1 z-depth-4">
-        <div class="card-content">
+      <div className="card blue-grey darken-1 z-depth-4">
+        <div className="card-content">
           {/* <h4 className="dashboardH3">Click on a note to view</h4> */}
           {state.posts.length ? (
             <List>
@@ -69,7 +69,7 @@ function PostsList() {
             )}
         </div>
 
-        <div class="card-action">
+        <div className="card-action">
           <div className="mt-5 viewImportant">
             <Link to="favorites">View Important Items</Link>
           </div>
