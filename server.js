@@ -3,6 +3,7 @@ const { cloudinary } = require('./client/src/utils/cloudinary');
 const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes");
+
 const app = express();
 var cors = require('cors');
 

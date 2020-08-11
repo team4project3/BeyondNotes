@@ -3,7 +3,7 @@ import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_POST, LOADING } from "../../utils/actions";
 import API from "../../utils/API";
 import { Link } from "react-router-dom";
-
+import "./style.css";
 
 
 function CreatePostForm() {
@@ -33,23 +33,16 @@ function CreatePostForm() {
   };
 
   return (
-    <div>
-      {/* <div className="jumbotron">
-        <CalendarImg image={Calendar}
-        />
-      </div> */}
-
-      {/* Add notes/activity */}
-      <div class="card blue-grey darken-1 z-depth-3">
-        <div class="card-content white-text">
+    <>
+      <div className="card orange z-depth-3">
+        <div className="card-content white-text">
 
           <span class="card-title">What's on Your List Today?</span>
           <form className="form-group mt-3 mb-3" onSubmit={handleSubmit}>
             <input className="form-control mb-3" required ref={titleRef} placeholder="Title" />
             <textarea className="form-control mb-3" required ref={bodyRef} placeholder="Body" />
             <input className="form-control mb-3" ref={authorRef} placeholder="Name" />
-            {/* <button className="btn btn-success mt-3 mb-3" disabled={state.loading} type="submit">
-            </button> */}
+
             <button className="btn btn-success mt-3 mb-3" disabled={state.loading} type="submit">
               Add
             </button>
@@ -57,10 +50,9 @@ function CreatePostForm() {
         </div>
       </div>
 
-      {/* Links to other pages? */}
-      <div class="card blue-grey darken-1 z-depth-3">
-        <div class="card-content white-text">
-          <div class="card-action">
+      <div className="card magentaCard z-depth-3">
+        <div className="card-content white-text">
+          <div className="card-action">
             <div className="mt-5 homeList">
               <Link to="favorites">Important</Link>
             </div>
@@ -77,7 +69,7 @@ function CreatePostForm() {
 
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
