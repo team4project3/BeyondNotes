@@ -5,8 +5,6 @@ import API from "../../utils/API";
 import { Link } from "react-router-dom";
 
 
-import CalendarImg from '../Calendar/calendar_img';
-import Calendar from "../../img/calendar.jpg";
 
 function CreatePostForm() {
   const titleRef = useRef();
@@ -50,10 +48,11 @@ function CreatePostForm() {
             <input className="form-control mb-3" required ref={titleRef} placeholder="Title" />
             <textarea className="form-control mb-3" required ref={bodyRef} placeholder="Body" />
             <input className="form-control mb-3" ref={authorRef} placeholder="Name" />
-
-              <button className="btn btn-success mt-3 mb-3" disabled={state.loading} type="submit">
-                Add
-              </button>
+            {/* <button className="btn btn-success mt-3 mb-3" disabled={state.loading} type="submit">
+            </button> */}
+            <button className="btn btn-success mt-3 mb-3" disabled={state.loading} type="submit">
+              Add
+            </button>
           </form>
         </div>
       </div>
@@ -63,16 +62,16 @@ function CreatePostForm() {
         <div class="card-content white-text">
           <div class="card-action">
             <div className="mt-5 homeList">
-              <Link to="favorites">View Important Items</Link>
+              <Link to="favorites">Important</Link>
             </div>
             <div className="mt-5 homeList">
-              <Link to="calendar">View Calendar</Link>
+              <Link to="calendar">Calendar</Link>
             </div>
             <div className="mt-5 homeList">
               <Link to="register">Register</Link>
             </div>
             <div className="mt-5 homeList">
-              <Link to="login">Login In</Link>
+              <Link to="login">Login</Link>
             </div>
           </div>
 
