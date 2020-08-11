@@ -1,10 +1,8 @@
-// Requiring bcrypt for password hashing. Using the bcryptjs version as the regular bcrypt module sometimes causes errors on Windows machines
-// const bcrypt = require("bcryptjs");
+var mongoose = require("mongoose"),
 //require mongoose
-// const mongoose = require("mongoose");
-var mongoose = require(mongoose),
     Schema = mongoose.Schema,
-    bcrypt = require(bcrypt),
+    // Requiring bcrypt for password hashing. Using the bcryptjs version as the regular bcrypt module sometimes causes errors on Windows machines
+    bcrypt = require("bcrypt"),
     SALT_WORK_FACTOR = 10;
 
 var UserSchema = new Schema({
