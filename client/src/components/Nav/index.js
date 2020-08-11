@@ -39,7 +39,7 @@ export default function SideNavBar (){
   
     return (
       <div>
-        <nav> More Then Just A Note ...Beyond Notes!</nav>
+        <nav> More Than Just A Note ...Beyond Notes!</nav>
           <ul id="slide-out" className="sidenav">
             <li>
               <div className="user-view">
@@ -56,9 +56,10 @@ export default function SideNavBar (){
             <li><div className="divider" /></li>
             <li><p className="lead center align"><NavTime></NavTime></p></li>
             <li><div className="divider" /></li>
-            <li><a href="/Home" className="active">Home</a></li>
+            <li><a href="/Home" className="active"><i class="material-icons">home</i>Home</a></li>
             <li><a href="/upload" className="active">Upload</a> </li>        
             <li><a href="/gallery" className="active">Gallery</a></li>
+            <li><a href="/logout"><i class="material-icons">rotate_left</i>Logout</a></li>
           </ul>
           <a href="#" data-target="slide-out" className="sidenav-trigger"><i className="material-icons">menu</i></a>
       </div>
