@@ -3,13 +3,13 @@ import React from "react";
 import CreatePostForm from "../components/CreatePostForm";
 import PostsList from "../components/PostsList";
 // import CalendarView from "../pages/App";
-import BlueRidge from "../img/calendar.jpg"
+import Nav from "../components/Nav";
 
 const Home = () => {
   return (
     <>
       <div className="homeBackground">
-
+        <Nav />
         <div className="row">
           {/* <h1 className="dashboard-title">Dashboard</h1> */}
           <div className="col m4 s6">
@@ -19,6 +19,7 @@ const Home = () => {
               </div>
             </div>
           </div>
+
           <div className="col m8 s6">
             <PostsList />
           </div>

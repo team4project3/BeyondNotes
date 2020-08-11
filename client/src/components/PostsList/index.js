@@ -6,7 +6,7 @@ import { useStoreContext } from "../../utils/GlobalState";
 import { REMOVE_POST, UPDATE_POSTS, LOADING } from "../../utils/actions";
 import API from "../../utils/API";
 // import PostIt from "../PostsList/postit.jpg";
-import PenPaper from "../PostsList/penpaper.jpg";
+// import PenPaper from "../PostsList/penpaper.jpg";
 import Slider from "../Carousel"
 
 function PostsList() {

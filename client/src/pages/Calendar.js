@@ -1,11 +1,13 @@
-import React, {Component} from 'react'
-import {Calendar, momentLocalizer} from 'react-big-calendar';
+import React, { Component } from 'react'
+import { Calendar, momentLocalizer } from 'react-big-calendar';
 import Views from "../Views";
 import events from '../events';
 import 'moment/locale/nb';
 import moment from "moment";
 import ExampleControlSlot from '../ExampleControlSlot'
 import 'react-big-calendar/lib/css/react-big-calendar.css';
+import Nav from "../components/Nav";
+
 const localizer = momentLocalizer(moment)
 const propTypes = {}
 
@@ -30,10 +32,11 @@ class MyBigCalendar extends Component {
         ],
       })
   }
-   
+
   render() {
     return (
       <>
+        <Nav />
         <ExampleControlSlot.Entry waitForOutlet>
           <strong>
             Click an event to see more info, or drag the mouse over the calendar
