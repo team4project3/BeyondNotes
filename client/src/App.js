@@ -1,20 +1,21 @@
-// import React from "react";
 import React, {useState} from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import Detail from "./pages/Detail";
 import Calendar from "./pages/Calendar";
 import NoMatch from "./pages/NoMatch";
-// import Nav from "./components/Nav";
 import { StoreProvider } from "./utils/GlobalState";
 import NoteList from "./pages/NoteList";
-// import FavoritesList from "./pages/FavoritesList";
 import Upload from './pages/Upload.js';
 import Gallery from './pages/Gallery.js';
-import Header from './components/Header/Header';
 import LoginForm from './components/LoginForm/LoginForm';
 import RegistrationForm from './components/RegistrationForm/RegistrationForm';
 import AlertComponent from './components/AlertComponent/AlertComponent'; 
+// import Header from './components/Header/Header';
+// import FavoritesList from "./pages/FavoritesList";
+// import Nav from "./components/Nav";
+
+
 
 function App() {
   const [title, updateTitle] = useState(null);

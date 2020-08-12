@@ -13,8 +13,8 @@ const Home = () => {
         <div className="row">
           {/* <h1 className="dashboard-title">Dashboard</h1> */}
           <div className="col m4 s6">
-            <div class="card blue-grey darken-1 z-depth-3">
-              <div class="card-content white-text">
+            <div className="card blue-grey darken-1 z-depth-3">
+              <div className="card-content white-text">
                 <CreatePostForm />
               </div>
             </div>
