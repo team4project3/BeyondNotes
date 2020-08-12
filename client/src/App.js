@@ -7,7 +7,8 @@ import Calendar from "./pages/Calendar";
 import NoMatch from "./pages/NoMatch";
 // import Nav from "./components/Nav";
 import { StoreProvider } from "./utils/GlobalState";
-import FavoritesList from "./pages/FavoritesList";
+import NoteList from "./pages/NoteList";
+// import FavoritesList from "./pages/FavoritesList";
 import Upload from './pages/Upload.js';
 import Gallery from './pages/Gallery.js';
 import Header from './components/Header/Header';
@@ -38,7 +39,7 @@ function App() {
             </Route>
 
             <Route exact path="/calendar" component={Calendar}/>
-            <Route exact path="/favorites" component={FavoritesList} />
+            <Route exact path="/notelist" component={NoteList} />
             <Route exact path="/posts/:id" component={Detail} />
             <Route exact path="/gallery" component={Gallery} />            
             <Route component={Upload} path="/upload" />
