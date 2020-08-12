@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { useStoreContext } from "../../utils/GlobalState";
-import { ADD_POST, LOADING, ADD_FAVORITE} from "../../utils/actions";
+import { ADD_POST, LOADING} from "../../utils/actions";
 import API from "../../utils/API";
 import { Link } from "react-router-dom";
 import "./style.css";
@@ -38,7 +38,7 @@ function CreatePostForm() {
       <div className="card orange z-depth-3">
         <div className="card-content white-text">
 
-          <span class="card-title">Any notes you'd like to add today?</span>
+          <span className="card-title">Any notes you'd like to add today?</span>
           <form className="form-group mt-3 mb-3" onSubmit={handleSubmit}>
             <input className="form-control mb-3" required ref={titleRef} placeholder="Title" />
             <textarea className="form-control mb-3" required ref={bodyRef} placeholder="Body" />

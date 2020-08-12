@@ -8,7 +8,8 @@ import DanielsPark from "./danielsPark.jpg";
 export default class Slider extends Component {
     componentDidMount() {
         var elem = document.querySelector('.carousel');
-        var instance = M.Carousel.init(elem, { duration: 200 });
+        M.Carousel.init(elem, { duration: 200 });
+        // var instance = M.Carousel.init(elem, { duration: 200 });
     }
     render() {
         return (
@@ -16,16 +17,16 @@ export default class Slider extends Component {
                 {/* <h3 className="header pink-text">Slider</h1> */}
                 <div className="carousel carousel-slider">
                     <a className="carousel-item" href="#one!">
-                        <img src={ BlueRidge1 } />
+                        <img src={BlueRidge1} alt="blueRidgeParkway1"/>
                     </a>
                     <a className="carousel-item" href="#two!">
-                        <img src={ BlueRidge2 } />
+                        <img src={BlueRidge2} alt="blueRidgeParkway2"/>
                     </a>
                     <a className="carousel-item" href="#three!">
-                        <img src={ DanielsPark } />
+                        <img src={DanielsPark} alt="danielsParkCO"/>
                     </a>
                 </div>
-                </>
+            </>
         );
     }
 }
