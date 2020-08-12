@@ -1,4 +1,3 @@
-  
 import { wrapAccessor } from '../../utils/accessors'
 import { createFactory } from 'react'
 
