@@ -7,10 +7,33 @@ const routes = require("./routes");
 const app = express();
 var cors = require('cors');
 
+const session = require("express-session");
+// Requiring passport as we've configured it
+const passport = require("./config/passport");
+
+//set image upload size
+app.use(express.json({ limit: '50mb' }));
+app.use(express.urlencoded({ limit: '50mb', extended: true }));
+app.use(cors());
+
+app.use(express.static("public"));
+// Serve up static assets (usually on heroku)
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+
+// We need to use sessions to keep track of our user's login status
+app.use(
+  session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
+);
+app.use(passport.initialize());
+app.use(passport.session());
+
+
 //get a list of public id's from the file folder in cloudinary
 app.get('/api/images', async (req, res) => {
   const { resources } = await cloudinary.search
-      .expression('folder:imageselector')
+      .expression('folder:imageupload')
       .sort_by('public_id', 'desc')
       .max_results(5)
       .execute();
@@ -23,7 +46,7 @@ app.post('/api/upload', async (req, res) => {
       const fileStr = req.body.data;
       const uploadResponse = await cloudinary.uploader.upload(fileStr, {
           //references the folder where files will be stored within cloudinary site
-          upload_preset: 'imageselector',
+          upload_preset: 'imageupload',
       });
       console.log(uploadResponse);
       res.json({ msg: 'Awesome--> Image loaded' });
@@ -34,18 +57,12 @@ app.post('/api/upload', async (req, res) => {
 });
 
 
-//set image upload size
-app.use(express.json({ limit: '50mb' }));
-app.use(express.urlencoded({ limit: '50mb', extended: true }));
-app.use(cors());
 
-// Define middleware here
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-// Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
+
+
+
+
+
 // Add routes, both API and view
 app.use(routes);
 

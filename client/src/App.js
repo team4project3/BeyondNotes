@@ -21,6 +21,7 @@ function App() {
   return (
     <Router>
       <div>
+          
         <StoreProvider>
           <Switch>
             {/* <Route exact path="/" component={Home} /> */}
