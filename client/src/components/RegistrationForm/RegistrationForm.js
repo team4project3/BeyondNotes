@@ -95,6 +95,13 @@ function RegistrationForm(props) {
 //  added Event handler to register button
 //      for sending a request to backend server.
 
+<>
+<nav className="navbar navbar-dark bg-primary">
+            <div className="row col-12 d-flex">
+                <span className="h1">Beyond Notes!</span>
+            </div>
+        </nav>
+
         <div className="card col-12 col-lg-4 login-card mt-2 hv-center">
             <form>
                 <div className="form-group text-left">
@@ -146,6 +153,8 @@ function RegistrationForm(props) {
             </div>
             
         </div>
+
+</>
  
  );
 }

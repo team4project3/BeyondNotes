@@ -6,7 +6,6 @@ import moment from "moment";
 import ControlSlot from '../ControlSlot'
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import Nav from "../components/Nav";
-// import withDragandDRop from "react-big-calendar/lib/addons/dragAndDrop";
 import withDragAndDrop from 'react-big-calendar/lib/addons/dragAndDrop';
 
 
@@ -131,6 +130,7 @@ class MyBigCalendar extends Component {
         ],
       })
   }
+
   newEvent(event){
 
   }
@@ -139,7 +139,9 @@ class MyBigCalendar extends Component {
     return (
       <>
         <Nav />
+
         <ControlSlot.Entry waitForOutlet>
+
           <strong>
             Click an event to see more info, or drag the mouse over the calendar
             to select a date/time range.

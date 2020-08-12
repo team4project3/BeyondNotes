@@ -1,6 +1,7 @@
 //this file is connected to ./pages/SideNavBar
 import React, { useState } from 'react';
 import Alert from '../components/AlertMainNavBar';
+import Nav from "../components/Nav";
 
 
 export default function Upload() {
@@ -54,6 +55,8 @@ export default function Upload() {
         }
     };
     return (
+        <>
+        <Nav/>
         <div>
             <h1 className="title">Upload an Image</h1>
             <Alert msg={errMsg} type="danger" />
@@ -79,5 +82,6 @@ export default function Upload() {
                 />
             )}
         </div>
+    </>
     );
 }

@@ -1,4 +1,11 @@
-.list-overflow-container {
+.collection .collection-item {
+  display: block;
+  -webkit-transition: .25s;
+  transition: .25s;
+  color: #26a69a;
+}
+
+/* .list-overflow-container {
   max-height: 545px;
   border: 1px #dddddd solid;
   border-radius: 4px;
@@ -30,4 +37,4 @@
 
 .list-overflow-container li:last-child {
   border-bottom: none;
-}
+} */
