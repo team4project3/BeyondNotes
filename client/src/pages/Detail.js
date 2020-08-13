@@ -1,101 +1,96 @@
-// import React, { useEffect, useRef } from "react";
-// import { Link } from "react-router-dom";
-// import { Col, Row, Container } from "../components/Grid";
-// import API from "../utils/API";
-// import Nav from "../components/Nav";
-// import { useStoreContext } from "../utils/GlobalState";
+import React, { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
+import { Col, Row, Container } from "../components/Grid";
+import API from "../utils/API";
+import Nav from "../components/Nav";
+import { useStoreContext } from "../utils/GlobalState";
 
-// import { SET_CURRENT_POST, UPDATE_POSTS, LOADING } from "../utils/actions";
+import { SET_CURRENT_POST, UPDATE_POSTS, LOADING } from "../utils/actions";
 
 
-// const Detail = props => {
-//   const titleRef = useRef();
-//   const bodyRef = useRef();
-//   const authorRef = useRef();
-//   const [state, dispatch] = useStoreContext();
+const Detail = props => {
+  const titleRef = useRef();
+  const bodyRef = useRef();
+  const authorRef = useRef();
+  const [state, dispatch] = useStoreContext();
 
-//   useEffect(() => {
-//     API.getPost(props.match.params.id)
-//       .then(res => dispatch({ type: SET_CURRENT_POST, post: res.data }))
-//       .catch(err => console.log(err));
-//   }, []);
+  useEffect(() => {
+    API.getPost(props.match.params.id)
+      .then(res => dispatch({ type: SET_CURRENT_POST, post: res.data }))
+      .catch(err => console.log(err));
+  }, []);
 
-//   const handleSubmit = e => {
-//     e.preventDefault();
-//     dispatch({ type: LOADING });
-//     API.savePost({
-//     // API.updatePost({
+  const handleSubmit = e => {
+    e.preventDefault();
+    dispatch({ type: LOADING });
+    // API.savePost({
+    API.updatePost(props.match.params.id, {
 
-//       title: titleRef.current.value,
-//       body: bodyRef.current.value,
-//       author: authorRef.current.value
-//     })
-//       .then(result => {
-//         dispatch({
-//           // type: ADD_FAVORITE,
-//           type: UPDATE_POSTS,
-//           // type: ADD_POST,
-//           // post: state.currentPost
-//           post: result.data
-//         });
-//       })
-//       .catch(err => console.log(err));
+      title: titleRef.current.value,
+      body: bodyRef.current.value,
+      author: authorRef.current.value
+      
+    })
 
-//     titleRef.current.value = "";
-//     bodyRef.current.value = "";
-//   };
+    // State not needed to update on this page
+    
+      .catch(err => console.log(err));
+
+    titleRef.current.value = "";
+    bodyRef.current.value = "";
+  };
 
 
 
-//   return (
-//     <>
-//       <Nav />
-//       {state.currentPost ? (
-//         <Container fluid>
-//           <form onSubmit={handleSubmit}>
-//             <Row>
-//               <Col size="md-12">
-//                 <div className="form-group">
-//                   <label htmlFor="display_name">Title:</label>
-//                   <input className="form-control" required ref={titleRef} name="display_name" type="text" defaultValue={state.currentPost.title} />
-//                 </div>
+  return (
+    <>
+      <Nav />
+      {state.currentPost ? (
+        <Container fluid>
+          <form onSubmit={handleSubmit}>
+            <Row>
+              <Col size="md-12">
+                <div className="form-group">
+                  <label htmlFor="display_name">Title:</label>
+                  <input className="form-control" required ref={titleRef} name="display_name" type="text" defaultValue={state.currentPost.title} />
+                </div>
 
-//                 <div className="form-group">
-//                   <label htmlFor="about">Detail:</label>
-//                   <input name="about" required ref={bodyRef} type="text" defaultValue={state.currentPost.body} />
-//                   <div id="editor-container">
-//                   </div>
-//                 </div>
+                <div className="form-group">
+                  <label htmlFor="about">Detail:</label>
+                  <input name="about" required ref={bodyRef} type="text" defaultValue={state.currentPost.body} />
+                  <div id="editor-container">
+                  </div>
+                </div>
 
 
-//                 <div className="form-group">
-//                   <label htmlFor="location">Name:</label>
-//                   <input className="form-control" ref={authorRef} name="location" type="text" defaultValue={state.currentPost.author} />
-//                 </div>
+                <div className="form-group">
+                  <label htmlFor="location">Name:</label>
+                  <input className="form-control" ref={authorRef} name="location" type="text" defaultValue={state.currentPost.author} />
+                </div>
 
-//                 <button className="btn btn-success mt-3 mb-3" disabled={state.loading} type="submit">
-//                   Save
-//                 </button>
+                <button className="btn btn-success mt-3 mb-3" disabled={state.loading} type="submit">
+                  Save
+                </button>
 
-//               </Col>
-//             </Row>
+              </Col>
+            </Row>
 
-//             <Row>
-//               <Col size="md-2">
-//                 <Link to="/home">← Back to Dashboard Home</Link>
-//               </Col>
-//             </Row>
-//           </form>
-//         </Container>
-//       ) : (
-//           <div>Test</div>
-//         )}
+            <Row>
+              <Col size="md-2">
+                <Link to="/home">← Back to Dashboard Home</Link>
+              </Col>
+            </Row>
+          </form>
+        </Container>
+      ) : (
+          <div>Test</div>
+        )}
 
-//     </>
-//   );
-// };
+    </>
+  );
+};
 
-// export default Detail;
+export default Detail;
 
 
 // const addFavorite = () => {

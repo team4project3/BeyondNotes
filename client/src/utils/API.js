@@ -19,6 +19,7 @@ export default {
   },
   //Updating posts?
   updatePost: function(id, postData) {
+    // console.log(id, postData);
     return axios.put("/api/posts/" + id, postData);
   }
 };
