@@ -57,21 +57,15 @@ app.post('/api/upload', async (req, res) => {
 });
 
 
-
-
-
-
-
-
 // Add routes, both API and view
 app.use(routes);
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactcms");
+mongoose.connect(MONGODB_URI);
 
 // Start the API server
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
-// ahhhhhh
