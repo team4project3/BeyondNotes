@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
-// import Detail from "./pages/Detail";
+import Detail from "./pages/Detail";
 import Calendar from "./pages/Calendar";
 import NoMatch from "./pages/NoMatch";
 import { StoreProvider } from "./utils/GlobalState";
@@ -41,7 +41,7 @@ function App() {
 
             <Route exact path="/calendar" component={Calendar}/>
             <Route exact path="/notelist" component={NoteList} />
-            {/* <Route exact path="/posts/:id" component={Detail} /> */}
+            <Route exact path="/posts/:id" component={Detail} />
             <Route exact path="/gallery" component={Gallery} />            
             <Route component={Upload} path="/upload" />
             <Route component={NoMatch} />

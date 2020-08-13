@@ -44,7 +44,7 @@ function CreatePostForm() {
             <textarea className="form-control mb-3" required ref={bodyRef} placeholder="Body" />
             <input className="form-control mb-3" ref={authorRef} placeholder="Name" />
 
-            <button className="btn btn-success mt-3 mb-3" disabled={state.loading} type="submit">
+            <button className="btn btn-success mt-3 mb-3" type="submit">
               Add
             </button>
           </form>
