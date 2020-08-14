@@ -39,7 +39,7 @@ function App() {
             <Route exact path="/calendar" component={Calendar}/>
 
             {/* <Route exact path="/quotes" component={Quotes}></Route> */}
-            <Route exact path="/favorites" component={FavoritesList} />
+            {/* <Route exact path="/favorites" component={FavoritesList} /> */}
 
             <Route exact path="/notelist" component={NoteList} />
 
