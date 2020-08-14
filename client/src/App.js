@@ -11,10 +11,7 @@ import Gallery from './pages/Gallery.js';
 import LoginForm from './components/LoginForm/LoginForm';
 import RegistrationForm from './components/RegistrationForm/RegistrationForm';
 import AlertComponent from './components/AlertComponent/AlertComponent'; 
-// import Header from './components/Header/Header';
-// import FavoritesList from "./pages/FavoritesList";
-// import Nav from "./components/Nav";
-
+import Quotes from "../src/components/Quotes/Quote.js";
 
 
 function App() {
@@ -23,12 +20,13 @@ function App() {
   return (
     <Router>
       <div>
+
+        {/* add quotes where you would like them. */}
           
         <StoreProvider>
           <Switch>
             {/* <Route exact path="/" component={Home} /> */}
             <Route exact path="/home" component={Home} />
-
             <Route path="/" exact={true}>
               <RegistrationForm showError={updateErrorMessage} updateTitle={updateTitle}/>
             </Route>
@@ -38,9 +36,13 @@ function App() {
             <Route path="/login">
               <LoginForm showError={updateErrorMessage} updateTitle={updateTitle}/>
             </Route>
-
             <Route exact path="/calendar" component={Calendar}/>
+
+            {/* <Route exact path="/quotes" component={Quotes}></Route> */}
+            <Route exact path="/favorites" component={FavoritesList} />
+
             <Route exact path="/notelist" component={NoteList} />
+
             <Route exact path="/posts/:id" component={Detail} />
             <Route exact path="/gallery" component={Gallery} />            
             <Route component={Upload} path="/upload" />
