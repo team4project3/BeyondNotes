@@ -1,20 +1,18 @@
-// import React from "react";
 import React, {useState} from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import Detail from "./pages/Detail";
 import Calendar from "./pages/Calendar";
 import NoMatch from "./pages/NoMatch";
-// import Nav from "./components/Nav";
 import { StoreProvider } from "./utils/GlobalState";
-import FavoritesList from "./pages/FavoritesList";
+import NoteList from "./pages/NoteList";
 import Upload from './pages/Upload.js';
 import Gallery from './pages/Gallery.js';
-import Header from './components/Header/Header';
 import LoginForm from './components/LoginForm/LoginForm';
 import RegistrationForm from './components/RegistrationForm/RegistrationForm';
 import AlertComponent from './components/AlertComponent/AlertComponent'; 
 import Quotes from "../src/components/Quotes/Quote.js";
+
 
 function App() {
   const [title, updateTitle] = useState(null);
@@ -39,8 +37,12 @@ function App() {
               <LoginForm showError={updateErrorMessage} updateTitle={updateTitle}/>
             </Route>
             <Route exact path="/calendar" component={Calendar}/>
+
             {/* <Route exact path="/quotes" component={Quotes}></Route> */}
             <Route exact path="/favorites" component={FavoritesList} />
+
+            <Route exact path="/notelist" component={NoteList} />
+
             <Route exact path="/posts/:id" component={Detail} />
             <Route exact path="/gallery" component={Gallery} />            
             <Route component={Upload} path="/upload" />
