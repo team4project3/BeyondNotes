@@ -4,6 +4,7 @@ import CreatePostForm from "../components/CreatePostForm";
 import PostsList from "../components/PostsList";
 // import CalendarView from "../pages/App";
 import Nav from "../components/Nav";
+import Quotes from "../components/Quotes/Quote";
 
 const Home = () => {
   return (
@@ -22,6 +23,11 @@ const Home = () => {
 
           <div className="col m8 s6">
             <PostsList />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col m8 s6">
+            <Quotes />
           </div>
         </div>
       </div>
