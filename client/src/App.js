@@ -11,7 +11,7 @@ import Gallery from './pages/Gallery.js';
 import LoginForm from './components/LoginForm/LoginForm';
 import RegistrationForm from './components/RegistrationForm/RegistrationForm';
 import AlertComponent from './components/AlertComponent/AlertComponent'; 
-import Quotes from "../src/components/Quotes/Quote.js";
+// import Quotes from "../src/components/Quotes/Quote.js";
 
 
 function App() {
