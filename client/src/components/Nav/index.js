@@ -3,6 +3,7 @@ import M from 'materialize-css'
 import 'material-icons/css/material-icons.scss';
 import React, {  useEffect, useState } from 'react';
 import NavTime from './NavTime'
+import ImageUpload from '../ImageUpload';
 import { Image } from 'cloudinary-react';
 
 
@@ -26,7 +27,7 @@ export default function SideNavBar (){
                   <img src="images/office.jpg" />
                   
                 </div>
-                <a href="#user"><img className="circle" src="images/yuna.jpg" /></a>
+                <a href="#user"><img className="circle" /><ImageUpload></ImageUpload></a>
                 <a href="#name"><span className="green-text name">John Doe</span></a>
                 <a href="#email"><span className="green-text email">jdandturk@gmail.com</span></a>
               </div>

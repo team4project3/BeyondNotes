@@ -9,7 +9,7 @@ import NoMatch from "./pages/NoMatch";
 import { StoreProvider } from "./utils/GlobalState";
 import FavoritesList from "./pages/FavoritesList";
 import Upload from './pages/Upload.js';
-import Gallery from './pages/Gallery.js';
+// import Gallery from './pages/Gallery.js';
 import Header from './components/Header/Header';
 import LoginForm from './components/LoginForm/LoginForm';
 import RegistrationForm from './components/RegistrationForm/RegistrationForm';
@@ -40,7 +40,7 @@ function App() {
             <Route exact path="/calendar" component={Calendar}/>
             <Route exact path="/favorites" component={FavoritesList} />
             <Route exact path="/posts/:id" component={Detail} />
-            <Route exact path="/gallery" component={Gallery} />            
+            {/* <Route exact path="/gallery" component={Gallery} />             */}
             <Route component={Upload} path="/upload" />
             <Route component={NoMatch} />
           </Switch>
