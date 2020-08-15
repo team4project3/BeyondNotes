@@ -24,10 +24,10 @@ export default function SideNavBar (){
             <li>
               <div className="user-view">
                 <div className="background">
-                  <img src="images/office.jpg" />
+                  <img src="assets/beautiful-sea.jpg" />
                   
                 </div>
-                <a href="#user"><img className="circle" /><ImageUpload></ImageUpload></a>
+                <a href="/upload"><ImageUpload></ImageUpload></a>
                 <a href="#name"><span className="green-text name">John Doe</span></a>
                 <a href="#email"><span className="green-text email">jdandturk@gmail.com</span></a>
               </div>
