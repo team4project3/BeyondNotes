@@ -6,7 +6,7 @@ body {
 
 .homeBackground {
   /* background: url("https://www.w3schools.com/cssref/mountain.jpg") no-repeat; background-size: cover; */
-  background: url("../src/img/drywall.jpg") repeat; background-size: cover;
+  /* background: url("../src/img/drywall.jpg") repeat; background-size: cover; */
   /* background-color:gray; */
   min-width: 100%;
   min-height: 100%;
