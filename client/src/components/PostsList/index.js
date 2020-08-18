@@ -39,34 +39,14 @@ function PostsList() {
 
   return (
     <div>
-{/* Carousel */}
+      {/* Carousel */}
       <Slider />
 
-      {/* <div class="card-image">
-          <img src={PenPaper} />
-          <span class="card-title">Test Text</span>
-        </div> */}
 
       <div className="card empty blue-grey darken-1 z-depth-4">
         <div className="card-content">
           
-
         </div>
-        {/* <div className="card-action">
-          <div className="mt-5 viewImportant">
-            <Link to="notelist">View Notes List</Link>
-          </div>
-          <div className="mt-5 viewImportant">
-            <Link to="calendar">View Calendar</Link>
-          </div>
-          <div className="mt-5 viewImportant">
-            <Link to="register">Register</Link>
-          </div>
-          <div className="mt-5 viewImportant">
-            <Link to="login">Login In</Link>
-          </div>
-        </div> */}
-
       </div>
 
     </div>

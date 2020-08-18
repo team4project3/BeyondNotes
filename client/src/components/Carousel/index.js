@@ -38,8 +38,8 @@ export default class Slider extends Component {
                 {/* <h3 className="header pink-text">Slider</h1> */}
                 <div className="carousel carousel-slider z-depth-5">
                     <div>
-                        <a id="carousel-prev" className="movePrevCarousel arrow waves-effect left">button</a>
-                        <a id="carousel-next" className="moveNextCarousel arrow waves-effect right">button</a>
+                        {/* <a id="carousel-prev" className="movePrevCarousel arrow waves-effect left">button</a>
+                        <a id="carousel-next" className="moveNextCarousel arrow waves-effect right">button</a> */}
                     </div>
                     <div>
                         <a className="carousel-item" href="#one!">

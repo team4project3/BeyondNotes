@@ -24,6 +24,8 @@
   .rbc-event {
     transition: opacity 150ms;
 
+    background-color: green;
+
     &:hover {
       .rbc-addons-dnd-resize-ns-icon, .rbc-addons-dnd-resize-ew-icon { display: block; }
     }

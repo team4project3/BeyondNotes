@@ -4,6 +4,7 @@ body {
   font-family: sans-serif;
 }
 
+/* Homepage */
 .homeBackground {
   /* background: url("https://www.w3schools.com/cssref/mountain.jpg") no-repeat; background-size: cover; */
   /* background: url("../src/img/drywall.jpg") repeat; background-size: cover; */
@@ -17,7 +18,6 @@ body {
 .card .empty {
   margin: 50px;
 }
-
 .pageCorner {
 max-width: 25%;
 max-height: 25%;
@@ -25,4 +25,17 @@ position: fixed;
 right: 0px;
 bottom: 0px;
 }
+
+/* Calendar */
+.rbc-calendar {
+  background-color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.rbc-event {
+  background-color: orange;
+}
+
+
 
