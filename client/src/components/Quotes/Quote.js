@@ -30,10 +30,12 @@ class Quote extends React.Component {
   };
 
   randomColor() {
-    const color = `rgb(
-      ${Math.floor(Math.random() * 155)},
-      ${Math.floor(Math.random() * 155)},
-      ${Math.floor(Math.random() * 155)})`;
+    const colors = ['#FF9AA2', '#FFB7B2', '#FFDAC1', '#E2F0CB', '#B5EAD7', '#C7CEEA']
+
+    const color = 
+
+    colors[Math.floor(Math.random() * colors.length)];
+
     return color;
   }
   
@@ -51,3 +53,12 @@ class Quote extends React.Component {
 }
 
 export default Quote;
+
+
+// randomColor() {
+//   const color = `rgb(
+//     ${Math.floor(Math.random() * 155)},
+//     ${Math.floor(Math.random() * 155)},
+//     ${Math.floor(Math.random() * 155)})`;
+//   return color;
+// }

@@ -47,7 +47,7 @@ function PostsList() {
           <span class="card-title">Test Text</span>
         </div> */}
 
-      <div className="card blue-grey darken-1 z-depth-4">
+      <div className="card empty blue-grey darken-1 z-depth-4">
         <div className="card-content">
           
 

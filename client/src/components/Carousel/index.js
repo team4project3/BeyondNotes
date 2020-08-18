@@ -36,20 +36,22 @@ export default class Slider extends Component {
         return (
             <>
                 {/* <h3 className="header pink-text">Slider</h1> */}
-                <div className="carousel carousel-slider">
+                <div className="carousel carousel-slider z-depth-5">
                     <div>
-                        <a id="carousel-prev" className="movePrevCarousel btn waves-effect left">button</a>
-                        <a id="carousel-next" className="moveNextCarousel btn waves-effect right">button</a>
+                        <a id="carousel-prev" className="movePrevCarousel arrow waves-effect left">button</a>
+                        <a id="carousel-next" className="moveNextCarousel arrow waves-effect right">button</a>
                     </div>
-                    <a className="carousel-item" href="#one!">
-                        <img src={BlueRidge1} alt="blueRidgeParkway1" />
-                    </a>
-                    <a className="carousel-item" href="#two!">
-                        <img src={BlueRidge2} alt="blueRidgeParkway2" />
-                    </a>
-                    <a className="carousel-item" href="#three!">
-                        <img src={DanielsPark} alt="danielsParkCO" />
-                    </a>
+                    <div>
+                        <a className="carousel-item" href="#one!">
+                            <img src={BlueRidge1} alt="blueRidgeParkway1" />
+                        </a>
+                        <a className="carousel-item" href="#two!">
+                            <img src={BlueRidge2} alt="blueRidgeParkway2" />
+                        </a>
+                        <a className="carousel-item" href="#three!">
+                            <img src={DanielsPark} alt="danielsParkCO" />
+                        </a>
+                    </div>
                 </div>
             </>
         );

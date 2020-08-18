@@ -5,6 +5,7 @@ import PostsList from "../components/PostsList";
 // import CalendarView from "../pages/App";
 import Nav from "../components/Nav";
 import Quotes from "../components/Quotes/Quote";
+import Corner from "../img/smallCorner.png"
 
 const Home = () => {
     return (
@@ -30,8 +31,22 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-        </>
-    );
+
+          </div>
+
+          <div className="col m8 s6">
+            <PostsList />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col m8 s6">
+            <Quotes />
+          </div>
+        </div>
+      <img className="pageCorner" src={Corner} alt="page corner"></img>
+      </div>
+    </>
+  );
 };
 
 // Previous

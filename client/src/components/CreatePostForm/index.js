@@ -4,6 +4,8 @@ import { ADD_POST, LOADING} from "../../utils/actions";
 import API from "../../utils/API";
 import { Link } from "react-router-dom";
 import "./style.css";
+// import Corner from "../../img/smallCornerMagenta.png"
+import Corner from "../../img/corner.png"
 
 
 function CreatePostForm() {
@@ -51,24 +53,27 @@ function CreatePostForm() {
         </div>
       </div>
 
-      <div className="card z-depth-3">
-          <div className="card-content magentaCard white-text">
-            <h5>View: </h5>
-              <div className="card-action">
-                  <div className="mt-5 homeList">
-                    <Link to="notelist">&#8226; Notes</Link>
-                  </div>
-                  {/* <br/> */}
-                  <div className="mt-5 homeList">
-                    <Link to="calendar">&#8226; Calendar</Link>
-                  </div>
-                  <div className="mt-5 homeList">
-                    <Link to="gallery">&#8226; Photo Gallery</Link>
-                  </div>
-                  <div className="mt-5 homeList">
-                    <Link to="login">&#8226; Log Out</Link>
-                  </div>
-              </div>
+      <div className="card magentaCard z-depth-3">
+        <div className="container">
+            <div className="card-content">
+              <h5>View: </h5>
+                <div className="card-action">
+                    <div className="mt-5 homeList">
+                      <Link to="notelist">&#8226; Notes</Link>
+                    </div>
+                    {/* <br/> */}
+                    <div className="mt-5 homeList">
+                      <Link to="calendar">&#8226; Calendar</Link>
+                    </div>
+                    <div className="mt-5 homeList">
+                      <Link to="gallery">&#8226; Photo Gallery</Link>
+                    </div>
+                    <div className="mt-5 homeList">
+                      <Link to="login">&#8226; Log Out</Link>
+                    </div>
+                </div>
+                <img className="magentaPageCorner" src={Corner} alt="page corner"></img>
+            </div>
           </div>
       </div>
     </>

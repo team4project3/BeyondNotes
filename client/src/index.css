@@ -6,10 +6,23 @@ body {
 
 .homeBackground {
   /* background: url("https://www.w3schools.com/cssref/mountain.jpg") no-repeat; background-size: cover; */
-  background: url("../src/img/drywall.jpg") repeat; background-size: cover;
+  /* background: url("../src/img/drywall.jpg") repeat; background-size: cover; */
+  /* background-color: white; */
   /* background-color:gray; */
+
   min-width: 100%;
   min-height: 100%;
 }
 
+.card .empty {
+  margin: 50px;
+}
+
+.pageCorner {
+max-width: 25%;
+max-height: 25%;
+position: fixed;
+right: 0px;
+bottom: 0px;
+}
 
