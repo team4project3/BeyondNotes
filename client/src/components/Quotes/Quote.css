@@ -14,7 +14,7 @@ body {
     height: auto;
     width: 100%;
     border: 1px rgb(145, 126, 126) solid;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     text-align: right;
     max-width: 35rem
     
@@ -22,7 +22,7 @@ body {
   
   #quote {
     margin: 10Quotepx;
-    text-align: left;
+    text-align: center;
   }
   
   .fadeIn {

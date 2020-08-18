@@ -2,6 +2,16 @@
     background-color: rgb(196, 108, 9);
 }
 
-.magentaCard {
+.card .magentaCard {
     background-color: rgb(184, 23, 103);
 }
+
+.magentaPageCorner {
+    max-width: 15%;
+    max-height: 15%;
+    position: absolute;
+    align-items: right;
+    bottom: 0px;
+    right: 0px;
+    }
+    
