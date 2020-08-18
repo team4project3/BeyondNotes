@@ -29,6 +29,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.16.3",
     "express-session": "^1.16.1",
+    "googleapis": "^59.0.0",
     "if-env": "^1.0.4",
     "jquery": "^3.5.1",
     "moment": "^2.27.0",
@@ -36,9 +37,12 @@
     "mongoose": "^5.3.16",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-big-calendar": "^0.26.0",
     "react-dom": "^16.13.1",
-    "react-tackle-box": "^2.1.0"
+    "react-router-dom": "^5.2.0",
+    "react-tackle-box": "^2.1.0",
+    "styled-components": "^5.1.1"
   }
 }

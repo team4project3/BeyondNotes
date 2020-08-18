@@ -13,6 +13,8 @@ body {
   .quotebox {
     height: auto;
     width: 100%;
+    margin-left: 75px;
+    /* font-size: 16px; */
     border: 1px rgb(145, 126, 126) solid;
     border-radius: 10px;
     text-align: right;
@@ -21,8 +23,10 @@ body {
   }
   
   #quote {
-    margin: 10Quotepx;
+    margin: 10px;
     text-align: left;
+    font-size: 20px;
+
   }
   
   .fadeIn {
@@ -44,6 +48,7 @@ body {
   
   #author {
     margin: 20px;
+    font-size: 16px;
     font-style: italic;
   }
   
@@ -53,7 +58,7 @@ body {
     border-radius: 5px;
     height: 35px;
     width: 100px;
-    font-weight: 700;
+    font-weight: 300;
     font-family: "Segoe UI", "Tahoma", "Geneva", "Verdana", sans-serif;
     color: white;
   }

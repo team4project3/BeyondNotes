@@ -11,7 +11,13 @@ import Gallery from './pages/Gallery.js';
 import LoginForm from './components/LoginForm/LoginForm';
 import RegistrationForm from './components/RegistrationForm/RegistrationForm';
 import AlertComponent from './components/AlertComponent/AlertComponent'; 
+import Contacts from "./components/Contacts";
+import "./App.css";
+import AddContact from "./components/AddContact";
+import EditContact from "./components/EditContact";
+import ContactsContextProvider from "./components/ContactsContextProvider";
 import Quotes from "../src/components/Quotes/Quote.js";
+
 
 
 function App() {
@@ -19,11 +25,10 @@ function App() {
   const [errorMessage, updateErrorMessage] = useState(null);
   return (
     <Router>
-      <div>
-
-        {/* add quotes where you would like them. */}
-          
+      <div> 
+      {/* <ContactsContextProvider> */}
         <StoreProvider>
+          {/* <ContactsContextProvider> */}
           <Switch>
             {/* <Route exact path="/" component={Home} /> */}
             <Route exact path="/home" component={Home} />
@@ -38,20 +43,22 @@ function App() {
             </Route>
             <Route exact path="/calendar" component={Calendar}/>
 
-            {/* <Route exact path="/quotes" component={Quotes}></Route> */}
-            <Route exact path="/favorites" component={FavoritesList} />
+            <Route exact path="/contacts" component={Contacts} /> 
+            <Route path="/add" component={AddContact} />
+            <Route path="/:id" component={EditContact} /> 
 
             <Route exact path="/notelist" component={NoteList} />
 
             <Route exact path="/posts/:id" component={Detail} />
             <Route exact path="/gallery" component={Gallery} />            
             <Route component={Upload} path="/upload" />
-            <Route component={NoMatch} />
+          <Route component={NoMatch} />
           </Switch>
 
           <AlertComponent errorMessage={errorMessage} hideError={updateErrorMessage}/>
-
+          {/* </ContactsContextProvider>  */}
         </StoreProvider>
+        {/* </ContactsContextProvider> */}
       </div>
     </Router>
   );
