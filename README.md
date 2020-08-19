@@ -3,6 +3,8 @@
 
 # Beyond Notes! 
 
+***GIF OR VIDEO HERE***
+
 ## Version:
 0.0.1
 
