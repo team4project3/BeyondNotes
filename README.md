@@ -7,14 +7,6 @@
 0.0.1
 
 
-
-
-## Description of Beyond Notes! :
-AS A person looking for an organization tool, I WANT an application where I can add my thoughts or notes, schedule my events and tasks, and create my own profile to log into SO THAT I can be more productive with my work team, personal schedule, or events. 
-
-
-
-
 ## Table of Contents:
 * TITLE
 * VERSION
@@ -28,11 +20,17 @@ AS A person looking for an organization tool, I WANT an application where I can 
 
 
 
+## Description of Beyond Notes! :
+AS A person looking for an organization tool, I WANT an application where I can add my thoughts or notes, schedule my events and tasks, and create my own profile to log into SO THAT I can be more productive with my work team, personal schedule, or events. 
+
+
+
+
 
 ## Installation: 
 ### Use the following instruction to install: 
 
-```App is live on Heroku: `https://beyondnotes.herokuapp.com/````
+App is live on Heroku: ```https://beyondnotes.herokuapp.com/```
 
 
 
@@ -55,7 +53,6 @@ AFeese, Travislovingood, Cheryld433, Jones-M12
 
 
 
-
 ## Tests: 
 ```Testing not implemented at this time.```
 
@@ -63,5 +60,5 @@ AFeese, Travislovingood, Cheryld433, Jones-M12
 
 
 ### Questions? Contact:
-
+TBD
 
