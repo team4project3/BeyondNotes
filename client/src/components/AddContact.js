@@ -64,7 +64,7 @@ export default class AddContact extends Component {
             ref={contactForm => (this.contactForm = contactForm)}
           >
             <h1>New Contact</h1>
-            <Link to="/" style={{ position: "absolute", top: 40 }}>
+            <Link to="/contact" style={{ position: "absolute", top: 40 }}>
               <Icon name="back" color="black" className="back-icon" />
             </Link>
             <div id="form-add">
