@@ -33,9 +33,12 @@ bottom: 0px;
   font-weight: bold;
 }
 
-.rbc-event {
+.rbc-event-content {
   background-color: orange;
 }
 
+/* .rbc-event {
+  background-color: orange;
+} */
 
 
