@@ -61,6 +61,7 @@ function CreatePostForm() {
                     <div className="mt-5 homeList">
                       <Link to="notelist">&#8226; Notes</Link>
                     </div>
+                    
                     {/* <br/> */}
                     <div className="mt-5 homeList">
                       <Link to="calendar">&#8226; Calendar</Link>
