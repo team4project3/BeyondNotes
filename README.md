@@ -57,8 +57,8 @@ Beyond Notes is designed for anyone who is looking for an organizational tool to
 
 
 ### Questions? Contact:
-cheryld433: `https://github.com/cheryld433`
-AFeese: `https://github.com/AFeese`
-Jones-M12: `https://github.com/Jones-M12`
-TravisLovingood: `https://github.com/TravisLovingood`
+* cheryld433: `https://github.com/cheryld433`
+* AFeese: `https://github.com/AFeese`
+* Jones-M12: `https://github.com/Jones-M12`
+* TravisLovingood: `https://github.com/TravisLovingood`
 
