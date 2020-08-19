@@ -10,6 +10,8 @@ componentDidMount = async () => {
 const randomPeopleRes = await fetch(
 "https://randomuser.me/api/?page=5&results=21&seed=abc"
     ).then(data => data.json());
+
+    // for loop to limit data return
     const { results: randomPeople } = randomPeopleRes;
     this.setState({ contacts: formatter(randomPeople) });
 };

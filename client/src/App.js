@@ -52,9 +52,7 @@ function App() {
             <Route exact path="/notelist" component={NoteList} />
             <Route exact path="/posts/:id" component={Detail} />
 
-            <Route exact path="/contacts" component={Contacts} />
-            <Route path="/add" component={AddContact} />
-            <Route path="/:id" component={EditContact} />
+
 
             {/* <Route exact path="/quotes" component={Quotes}></Route> */}
             {/* <Route exact path="/favorites" component={FavoritesList} /> */}
@@ -63,6 +61,13 @@ function App() {
 
             <Route exact path="/gallery" component={Gallery} />
             <Route component={Upload} path="/upload" />
+
+            <ContactsContextProvider>
+              <Route exact path="/contacts" component={Contacts} />
+              <Route path="/add" component={AddContact} />
+              <Route path="/:id" component={EditContact} />
+            </ContactsContextProvider>
+
             <Route component={NoMatch} />
 
           </Switch>
