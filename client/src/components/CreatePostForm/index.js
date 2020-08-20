@@ -2,10 +2,11 @@ import React, { useRef } from "react";
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_POST, LOADING } from "../../utils/actions";
 import API from "../../utils/API";
-import { Link } from "react-router-dom";
 import "./style.css";
+import Corner from "../../img/smallCornerOrange.png"
+// import Corner from "../../img/corner.png"
 // import Corner from "../../img/smallCornerMagenta.png"
-import Corner from "../../img/corner.png"
+// import { Link } from "react-router-dom";
 
 
 function CreatePostForm() {
@@ -40,7 +41,6 @@ function CreatePostForm() {
 
       <div className="card orange z-depth-3">
         <div className="card-content white-text">
-
           <span className="card-title">Any notes you'd like to add today?</span>
           <form className="form-group mt-3 mb-3" onSubmit={handleSubmit}>
             <input className="form-control mb-3" required ref={titleRef} placeholder="Title" />
