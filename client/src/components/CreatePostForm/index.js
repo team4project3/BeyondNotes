@@ -34,25 +34,26 @@ function CreatePostForm() {
 
     titleRef.current.value = "";
     bodyRef.current.value = "";
+    authorRef.current.value = "";
   };
 
   return (
     <>
 
       <div className="card orange z-depth-3">
-        <div className="card-content white-text">
-          <span className="card-title">Any notes you'd like to add today?</span>
-          <form className="form-group mt-3 mb-3" onSubmit={handleSubmit}>
+        <div className="card-content">
+          <span className="card-title noteBox">Need to Add a Note?</span>
+          <form className="form-group mt-3 mb-3 formBox" onSubmit={handleSubmit}>
             <input className="form-control mb-3" required ref={titleRef} placeholder="Title" />
-            <textarea className="form-control mb-3" required ref={bodyRef} placeholder="Body" />
+            <textarea className="form-control mb-3 bodyPlaceholder" required ref={bodyRef} placeholder="Body" />
             <input className="form-control mb-3" ref={authorRef} placeholder="Name" />
 
-            <button className="btn btn-success mt-3 mb-3" type="submit">
+            <button className="orangeAddButton" type="submit">
               Add
             </button>
           </form>
         </div>
-        <img className="magentaPageCorner" src={Corner} alt="page corner"></img>
+        <img className="orangePageCorner" src={Corner} alt="orange page corner"></img>
 
       </div>
 

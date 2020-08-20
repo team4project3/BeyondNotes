@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useStoreContext } from "../../utils/GlobalState";
 import { REMOVE_POST, UPDATE_POSTS, LOADING } from "../../utils/actions";
 import API from "../../utils/API";
-
+import "./postlist.css";
 
 const NoteList = () => {
 
@@ -42,8 +42,8 @@ const NoteList = () => {
     <>
       <div className="container mb-5 mt-5">
         {/* <h2 className="text-center">Note List:</h2> */}
-        <div className="card blue-grey darken-1 z-depth-4">
-          <div className="card-content">
+        <div className="card z-depth-4">
+          <div className="card-content noteListContent">
             {state.posts.length ? (
 
               <List>
@@ -53,7 +53,7 @@ const NoteList = () => {
                   <ListItem key={post._id}>
                     <Link to={"/posts/" + post._id}>
                       <strong>
-                        {post.title} - {post.body}. Entered By: {post.author}
+                        {post.title} : {post.body} | {post.author}
                       </strong>
                     </Link>
                     <DeleteBtn onClick={() => removePost(post._id)} />
@@ -61,7 +61,7 @@ const NoteList = () => {
                 ))}
               </List>
             ) : (
-                <h4 className="dashboardH3">Note List is Empty for Now!</h4>
+                <h4 className="emptyNoteList">Note List is Empty for Now!</h4>
               )}
           </div>
 

@@ -1,11 +1,15 @@
-.collection .collection-item {
+.list-group-item {
   display: block;
   -webkit-transition: .25s;
   transition: .25s;
   color: #26a69a;
+  font-size: 15px;
+  /* background-color: rgba(78, 46, 31, 0.5); */
+  border-bottom: 1.5px rgba(78, 46, 31, 0.5) inset;
+  margin-bottom: 5px;
 }
 
-/* .list-overflow-container {
+.list-overflow-container {
   max-height: 545px;
   border: 1px #dddddd solid;
   border-radius: 4px;
@@ -37,4 +41,4 @@
 
 .list-overflow-container li:last-child {
   border-bottom: none;
-} */
+}
