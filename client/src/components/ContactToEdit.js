@@ -4,7 +4,7 @@ import { ContactImageContainer } from "./Contact";
 import { Button } from "./Contacts";
 import { Redirect } from "react-router-dom";
 import PropTypes from "prop-types";
-import Icon from "../components/Icon";
+import Icon from "./elements/Icon";
 
 export default class ContactToEdit extends Component {
   state = {
@@ -80,7 +80,7 @@ export default class ContactToEdit extends Component {
              Finish editing
            </Button>
          ) : (
-           <Redirect to="/" />
+           <Redirect to="/contacts" />
          )}
        </ContactForm>
      );

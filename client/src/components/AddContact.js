@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { Link } from "react-router-dom";
 import { Consumer } from "./ContactsContext";
-import Icon from "./Icon";
+import Icon from "./elements/Icon";
 
 export default class AddContact extends Component {
   state = {
@@ -116,7 +116,7 @@ export default class AddContact extends Component {
               </ContactButton>
               {this.state.contactAdded && (
                 <ContactButton color="lightgreen">
-                  <Link to="/">Return to contacts</Link>
+                  <Link to="/contacts">Return to contacts</Link>
                 </ContactButton>
               )}
             </div>
@@ -185,7 +185,7 @@ const ContactButton = styled.button`
   margin: 0 1em;
   background: ${props => props.color};
   padding: 0.5em;
-  border-radius: 4px;
+  border-radius: px;
   &:hover {
     cursor: pointer;
   }

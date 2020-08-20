@@ -64,6 +64,7 @@ const ModalWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  // background-color: #e98feb;
 `;
 
 const ModalCard = styled.div`
