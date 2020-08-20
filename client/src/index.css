@@ -19,12 +19,11 @@ body {
   font-size: 18px;
 }
 
-.orange {
-  background-color: rgb(196, 108, 9);
-}
 
 .magentaCard {
   background-color: rgb(184, 23, 103);
+  border-right: 4.5px outset rgba(224, 92, 136, 0.63);
+  border-bottom: 4.5px outset rgba(167, 37, 117, 0.664);
 }
 
 .magentaPageCorner {
@@ -32,8 +31,8 @@ body {
   max-height: 15%;
   position: absolute;
   align-items: right;
-  bottom: 0px;
-  right: 0px;
+  bottom: 5px;
+  right: 5px;
 }
 
 

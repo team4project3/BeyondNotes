@@ -25,6 +25,11 @@ textarea {
 
 .orange {
     background-color: rgb(196, 108, 9);
+    /* border-right: 4px solid rgba(114, 53, 18, 0.664);
+    border-bottom: 4px solid rgba(156, 73, 25, 0.664); */
+    
+    border-right: 4.5px outset rgba(250, 153, 43, 0.712);
+    border-bottom: 4.5px outset rgba(151, 71, 25, 0.664);
 }
 
 .orangePageCorner {
@@ -32,8 +37,8 @@ textarea {
     max-height: 15%;
     position: absolute;
     align-items: right;
-    bottom: 0px;
-    right: 0px;
+    bottom: 1px;
+    right: 1px;
     }
 
 .orangeAddButton {
