@@ -3,18 +3,16 @@ import { Provider } from "./ContactsContext";
 import { formatter } from "../helpers";
 
 export default class ContactsContextProvider extends Component {
-state = {
-contacts: []
-};
-componentDidMount = async () => {
-const randomPeopleRes = await fetch(
-"https://randomuser.me/api/?page=5&results=21&seed=abc"
+  state = {
+    contacts: []
+  };
+  componentDidMount = async () => {
+    const randomPeopleRes = await fetch(
+      "https://randomuser.me/api/?page=1&results=6&seed=abc"
     ).then(data => data.json());
-
-    // for loop to limit data return
     const { results: randomPeople } = randomPeopleRes;
     this.setState({ contacts: formatter(randomPeople) });
-};
+  };
 
   removeContact = id => {
     this.setState(prevState => ({
@@ -30,13 +28,12 @@ const randomPeopleRes = await fetch(
       () => console.log(this.state.contacts)
     );
   };
-
   updateContact = editedContact => {
     const { contacts } = this.state;
     const contactToUpdate = contacts.find(
       contact => contact.id === Number(editedContact.id)
     );
-     
+     //place update contact in same position as it was
     const updatedContacts = contacts.map(contact => {
       if (contact.id === contactToUpdate.id) {
         contact = editedContact;

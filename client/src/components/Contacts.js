@@ -44,10 +44,10 @@ const ContactsContainer = styled.div`
   margin: 0 auto;
   color: whitesmoke;
   padding: 1.5em;
-  background: #c7ceea;
+  background: #e98feb;
   #contacts {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 `;
 

@@ -2,11 +2,11 @@ import React, { Fragment } from "react";
 import styled from "styled-components";
 import { Consumer } from "./ContactsContext";
 import { Link } from "react-router-dom";
-import Toggle from "./Toggle";
-import Modal from "./Modal";
+import Toggle from "./elements/Toggle";
+import Modal from "./elements/Modal";
 import { Button } from "./Contacts";
 import PropTypes from "prop-types";
-import Icon from "./Icon";
+import Icon from "./elements/Icon";
 
 const Contact = ({ name, img, email, number, id, location }) => (
 
@@ -102,7 +102,7 @@ const ContactContainer = styled.div`
   color: black;
   div#details {
     text-align: center;
-    padding: 0.6em;
+    padding: 0.3em;
   }
 
   .button-group {
@@ -112,12 +112,12 @@ const ContactContainer = styled.div`
     margin: 0 auto;
 
     button {
-      padding: 0.5em;
+      padding: 0.1em;
       color: white;
       width: 60px;
       margin: 0 1em;
       border: none;
-      border-radius: 2px;
+      border-radius: 0px;
       &:hover {
         transform: scale(1.2);
         transition-duration: 300ms;
@@ -126,11 +126,13 @@ const ContactContainer = styled.div`
     }
 
     #remove {
-      background: red;
+      background: #eb8334;
+      font-size: 16px;
     }
 
     #edit {
-      background: teal;
+      background: #eb349b;
+      font-size: 16px;
     }
   }
 `;
@@ -138,7 +140,7 @@ const ContactContainer = styled.div`
 export const ContactImageContainer = styled.div`
   width: 100px;
   height: 100px;
-  clip-path: circle(50% at 50% 50%);
+  // clip-path: circle(50% at 50% 50%);
   margin: 0 auto;
   img {
     width: 100px;

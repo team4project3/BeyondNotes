@@ -37,6 +37,12 @@ bottom: 0px;
   background-color: orange;
 }
 
+.rbc-btn-group {
+  /* background-color: #a0f277; */
+  /* background-color: #77bbf2; */
+  background-color: #f077f2;
+}
+
 /* .rbc-event {
   background-color: orange;
 } */
