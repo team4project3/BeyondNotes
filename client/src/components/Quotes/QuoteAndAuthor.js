@@ -18,7 +18,7 @@ class QuoteAndAuthor extends React.Component {
                 <button style={{ backgroundColor: randomColor }}
                 id="newquote"
                 onClick={this.props.handleClick}>
-                    NewQuote
+                    New Quote
                 </button>
             </div>
         );

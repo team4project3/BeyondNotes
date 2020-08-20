@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { StoreProvider } from "./utils/GlobalState";
 import Home from "./pages/Home";
 import Detail from "./pages/Detail";
 import Calendar from "./pages/Calendar";
 import NoMatch from "./pages/NoMatch";
-import { StoreProvider } from "./utils/GlobalState";
-import NoteList from "./pages/NoteList";
 import Upload from './pages/Upload.js';
 import Gallery from './pages/Gallery.js';
 import LoginForm from './components/LoginForm/LoginForm';
 import RegistrationForm from './components/RegistrationForm/RegistrationForm';
 import AlertComponent from './components/AlertComponent/AlertComponent';
 import Contacts from "./components/Contacts";
-import "./App.css";
 import AddContact from "./components/AddContact";
 import EditContact from "./components/EditContact";
 import ContactsContextProvider from "./components/ContactsContextProvider";
+import "./App.css";
 // import Quotes from "../src/components/Quotes/Quote.js";
+// import NoteList from "./pages/NoteList";
 
 
 
@@ -27,11 +27,8 @@ function App() {
   return (
     <Router>
       <div>
-        {/* <ContactsContextProvider> */}
         <StoreProvider>
-          {/* <ContactsContextProvider> */}
           <Switch>
-            {/* <Route exact path="/" component={Home} /> */}
 
             <Route path="/register">
               <RegistrationForm showError={updateErrorMessage} updateTitle={updateTitle} />
@@ -49,15 +46,7 @@ function App() {
 
 
             <Route exact path="/calendar" component={Calendar} />
-            <Route exact path="/notelist" component={NoteList} />
             <Route exact path="/posts/:id" component={Detail} />
-
-
-
-            {/* <Route exact path="/quotes" component={Quotes}></Route> */}
-            {/* <Route exact path="/favorites" component={FavoritesList} /> */}
-
-
 
             <Route exact path="/gallery" component={Gallery} />
             <Route component={Upload} path="/upload" />
@@ -73,9 +62,7 @@ function App() {
           </Switch>
 
           <AlertComponent errorMessage={errorMessage} hideError={updateErrorMessage} />
-          {/* </ContactsContextProvider>  */}
         </StoreProvider>
-        {/* </ContactsContextProvider> */}
       </div>
     </Router>
   );

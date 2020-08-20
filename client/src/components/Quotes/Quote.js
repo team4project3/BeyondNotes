@@ -14,10 +14,10 @@ class Quote extends React.Component {
   randomQuote() {
     const randomNumber = Math.floor(Math.random() * quotes.length);
     return quotes[randomNumber];
-    
+
   }
-  shuffleQuotes(array){
-    return array.sort(()=>Math.random()-0.5)
+  shuffleQuotes(array) {
+    return array.sort(() => Math.random() - 0.5)
   }
 
   handleClick = () => {
@@ -32,16 +32,16 @@ class Quote extends React.Component {
   randomColor() {
     const colors = ['#FF9AA2', '#FFB7B2', '#FFDAC1', '#E2F0CB', '#B5EAD7', '#C7CEEA']
 
-    const color = 
+    const color =
 
-    colors[Math.floor(Math.random() * colors.length)];
+      colors[Math.floor(Math.random() * colors.length)];
 
     return color;
   }
-  
+
   render() {
     return (
-      <div>
+      <div className="card-content quoteContent z-depth-4">
         <QuoteAndAuthor
           displayColor={this.randomColor}
           handleClick={this.handleClick}

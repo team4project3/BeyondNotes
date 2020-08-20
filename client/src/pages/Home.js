@@ -6,6 +6,10 @@ import PostsList from "../components/PostsList";
 import Nav from "../components/Nav";
 import Quotes from "../components/Quotes/Quote";
 import Corner from "../img/smallCorner.png"
+import MagentaCorner from "../img/smallCornerMagenta.png" 
+import { Link } from "react-router-dom";
+import "../index.css"
+
 
 const Home = () => {
   return (
@@ -13,24 +17,49 @@ const Home = () => {
       <div className="homeBackground">
         <Nav />
 
-        <div className="row">
+        <div className="row homeRow z-depth-4">
+          {/* <div className="row card homeRow blue-grey darken-1 z-depth-4"> */}
           {/* <h1 className="dashboard-title">Dashboard</h1> */}
           <div className="col m4 s6">
-            <div className="card blue-grey darken-1 z-depth-3">
-              <div className="card-content white-text">
-                <CreatePostForm />
+            <div className="card z-depth-3">
+              <div className="card-content magentaCard z-depth-4">
+                <h5>What's on the Agenda Today? </h5>
+                <div className="card-action">
+                  <div className="mt-5 homeList">
+                    <Link to="calendar">&#8226; Calendar</Link>
+                  </div>
+                  <div className="mt-5 homeList">
+                    <Link to="contacts">&#8226; Contacts</Link>
+                  </div>
+                  <div className="mt-5 homeList">
+                    <Link to="login">&#8226; Log Out</Link>
+                  </div>
+                </div>
+                <img className="magentaPageCorner" src={MagentaCorner} alt="page corner"></img>
               </div>
             </div>
           </div>
           <div className="col m8 s6">
-            <PostsList />
-            <div className="row">
-              <div className="col m8 s8 quotes">
-                <Quotes />
-              </div>
-            </div>
+            {/* <div className="card-content z-depth-4"> */}
+              <Quotes />
+            {/* </div> */}
           </div>
         </div>
+
+        {/* <div className="row card homeRow blue-grey darken-1 z-depth-3"> */}
+        <div className="row homeRow z-depth-3">
+          <div className="col m4 s6">
+
+            <div className="card-content white-text">
+              <CreatePostForm />
+            </div>
+          </div>
+
+          <div className="col m8 s6">
+            <PostsList />
+          </div>
+        </div>
+
       </div>
 
       <img className="pageCorner" src={Corner} alt="page corner"></img>

@@ -1,17 +1,58 @@
+/* .card .magentaCard {
+    background-color: rgb(184, 23, 103);
+} */
+
+.noteBox {
+    color: black;
+}
+
+.formBox {
+    border-top: 1px solid rgba(134, 116, 105, 0.123);
+}
+
+input {
+    color: white;
+    font-size: 15px;
+}
+textarea {
+    color: white;
+    font-size: 15px;
+}
+
+.bodyPlaceholder {
+    font-size: 15px;
+}
+
 .orange {
     background-color: rgb(196, 108, 9);
+    /* border-right: 4px solid rgba(114, 53, 18, 0.664);
+    border-bottom: 4px solid rgba(156, 73, 25, 0.664); */
+    
+    border-right: 4.5px outset rgba(250, 153, 43, 0.712);
+    border-bottom: 4.5px outset rgba(151, 71, 25, 0.664);
 }
 
-.card .magentaCard {
-    background-color: rgb(184, 23, 103);
-}
-
-.magentaPageCorner {
+.orangePageCorner {
     max-width: 15%;
     max-height: 15%;
     position: absolute;
     align-items: right;
-    bottom: 0px;
-    right: 0px;
+    bottom: 1px;
+    right: 1px;
+    }
+
+.orangeAddButton {
+    /* margin: 20px; */
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border: 5px darkgoldenrod;
+    border-radius: 5px;
+    height: 35px;
+    width: 100px;
+    font-size: 15px;
+    font-family: "Segoe UI", "Tahoma", "Geneva", "Verdana", sans-serif;
+    color: black;
+    align-items: center;
     }
     
