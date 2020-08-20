@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { useStoreContext } from "../../utils/GlobalState";
-import { ADD_POST, LOADING} from "../../utils/actions";
+import { ADD_POST, LOADING } from "../../utils/actions";
 import API from "../../utils/API";
 import { Link } from "react-router-dom";
 import "./style.css";
@@ -37,6 +37,7 @@ function CreatePostForm() {
 
   return (
     <>
+
       <div className="card orange z-depth-3">
         <div className="card-content white-text">
 
@@ -51,34 +52,35 @@ function CreatePostForm() {
             </button>
           </form>
         </div>
+        <img className="magentaPageCorner" src={Corner} alt="page corner"></img>
+
       </div>
 
-      <div className="card magentaCard z-depth-3">
-        <div className="container">
-            <div className="card-content">
-              <h5>View: </h5>
-                <div className="card-action">
-                    <div className="mt-5 homeList">
-                      <Link to="notelist">&#8226; Notes</Link>
-                    </div>
-                    
-                    {/* <br/> */}
-                    <div className="mt-5 homeList">
-                      <Link to="calendar">&#8226; Calendar</Link>
-                    </div>
-                    <div className="mt-5 homeList">
-                      <Link to="gallery">&#8226; Photo Gallery</Link>
-                    </div>
-                    <div className="mt-5 homeList">
-                      <Link to="login">&#8226; Log Out</Link>
-                    </div>
-                </div>
-                <img className="magentaPageCorner" src={Corner} alt="page corner"></img>
-            </div>
-          </div>
-      </div>
     </>
   );
 }
 
 export default CreatePostForm;
+
+      {/* <div className="card magentaCard z-depth-3">
+        <div className="container">
+          <div className="card-content">
+            <h5>View: </h5>
+            <div className="card-action">
+              <div className="mt-5 homeList">
+                <Link to="notelist">&#8226; Notes</Link>
+              </div>
+              <div className="mt-5 homeList">
+                <Link to="calendar">&#8226; Calendar</Link>
+              </div>
+              <div className="mt-5 homeList">
+                <Link to="gallery">&#8226; Photo Gallery</Link>
+              </div>
+              <div className="mt-5 homeList">
+                <Link to="login">&#8226; Log Out</Link>
+              </div>
+            </div>
+            <img className="magentaPageCorner" src={Corner} alt="page corner"></img>
+          </div>
+        </div>
+      </div> */}
