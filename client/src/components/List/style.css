@@ -9,6 +9,11 @@
   margin-bottom: 5px;
 }
 
+.noteH5 {
+  margin-top: 0px;
+  font-weight: 330;
+}
+
 .list-overflow-container {
   max-height: 545px;
   border: 1px #dddddd solid;

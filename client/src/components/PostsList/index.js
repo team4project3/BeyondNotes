@@ -44,11 +44,10 @@ const NoteList = () => {
         {/* <h2 className="text-center">Note List:</h2> */}
         <div className="card z-depth-4">
           <div className="card-content noteListContent">
+
             {state.posts.length ? (
 
               <List>
-                <h5 className="text-center">Click on a Note to Edit</h5>
-
                 {state.posts.map(post => (
                   <ListItem key={post._id}>
                     <Link to={"/posts/" + post._id}>

@@ -6,6 +6,8 @@ export function List({ children }) {
   return (
     // <div className="list-overflow-container">
     <>
+      <h5 className="text-center noteH5">Click on a Note to Edit</h5>
+
       <ul className="list-group">{children}</ul>
       {/* <ul className="collection">{children}</ul> */}
     </>
