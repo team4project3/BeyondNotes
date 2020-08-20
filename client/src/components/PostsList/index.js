@@ -1,11 +1,13 @@
 import React, { useEffect } from "react";
-import { ListItem, List } from "../List";
-import DeleteBtn from "../DeleteBtn";
-import { Link } from "react-router-dom";
+// import { ListItem, List } from "../List";
+// import DeleteBtn from "../DeleteBtn";
+// import { Link } from "react-router-dom";
 import { useStoreContext } from "../../utils/GlobalState";
 import { REMOVE_POST, UPDATE_POSTS, LOADING } from "../../utils/actions";
 import API from "../../utils/API";
-import Slider from "../Carousel"
+// import Slider from "../Carousel"
+import Quotes from "../Quotes/Quote";
+
 
 function PostsList() {
   const [state, dispatch] = useStoreContext();
@@ -40,14 +42,7 @@ function PostsList() {
   return (
     <div>
       {/* Carousel */}
-      <Slider />
-
-
-      <div className="card empty blue-grey darken-1 z-depth-4">
-        <div className="card-content">
-          
-        </div>
-      </div>
+      {/* <Slider /> */}
 
     </div>
   );

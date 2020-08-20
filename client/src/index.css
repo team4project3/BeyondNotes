@@ -15,9 +15,28 @@ body {
   min-height: 100%;
 }
 
-.card .empty {
-  margin: 50px;
+.homeList {
+  font-size: 18px;
 }
+
+.orange {
+  background-color: rgb(196, 108, 9);
+}
+
+.magentaCard {
+  background-color: rgb(184, 23, 103);
+}
+
+.magentaPageCorner {
+  max-width: 15%;
+  max-height: 15%;
+  position: absolute;
+  align-items: right;
+  bottom: 0px;
+  right: 0px;
+}
+
+
 .pageCorner {
 max-width: 25%;
 max-height: 25%;

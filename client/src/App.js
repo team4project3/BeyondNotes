@@ -27,11 +27,8 @@ function App() {
   return (
     <Router>
       <div>
-        {/* <ContactsContextProvider> */}
         <StoreProvider>
-          {/* <ContactsContextProvider> */}
           <Switch>
-            {/* <Route exact path="/" component={Home} /> */}
 
             <Route path="/register">
               <RegistrationForm showError={updateErrorMessage} updateTitle={updateTitle} />
@@ -52,13 +49,6 @@ function App() {
             <Route exact path="/notelist" component={NoteList} />
             <Route exact path="/posts/:id" component={Detail} />
 
-
-
-            {/* <Route exact path="/quotes" component={Quotes}></Route> */}
-            {/* <Route exact path="/favorites" component={FavoritesList} /> */}
-
-
-
             <Route exact path="/gallery" component={Gallery} />
             <Route component={Upload} path="/upload" />
 
@@ -73,9 +63,7 @@ function App() {
           </Switch>
 
           <AlertComponent errorMessage={errorMessage} hideError={updateErrorMessage} />
-          {/* </ContactsContextProvider>  */}
         </StoreProvider>
-        {/* </ContactsContextProvider> */}
       </div>
     </Router>
   );
