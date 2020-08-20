@@ -6,6 +6,7 @@ import PostsList from "../components/PostsList";
 import Nav from "../components/Nav";
 import Quotes from "../components/Quotes/Quote";
 import Corner from "../img/smallCorner.png"
+import MagentaCorner from "../img/smallCornerMagenta.png" 
 import { Link } from "react-router-dom";
 import "../index.css"
 
@@ -20,13 +21,10 @@ const Home = () => {
           {/* <div className="row card homeRow blue-grey darken-1 z-depth-4"> */}
           {/* <h1 className="dashboard-title">Dashboard</h1> */}
           <div className="col m4 s6">
-            <div className="card magentaCard z-depth-3">
-              <div className="card-content">
+            <div className="card z-depth-3">
+              <div className="card-content magentaCard z-depth-4">
                 <h5>What's on the Agenda Today? </h5>
                 <div className="card-action">
-                  <div className="mt-5 homeList">
-                    <Link to="notelist">&#8226; Notes</Link>
-                  </div>
                   <div className="mt-5 homeList">
                     <Link to="calendar">&#8226; Calendar</Link>
                   </div>
@@ -37,14 +35,14 @@ const Home = () => {
                     <Link to="login">&#8226; Log Out</Link>
                   </div>
                 </div>
-                <img className="magentaPageCorner" src={Corner} alt="page corner"></img>
+                <img className="magentaPageCorner" src={MagentaCorner} alt="page corner"></img>
               </div>
             </div>
           </div>
           <div className="col m8 s6">
-            <div className="card-content">
+            {/* <div className="card-content z-depth-4"> */}
               <Quotes />
-            </div>
+            {/* </div> */}
           </div>
         </div>
 

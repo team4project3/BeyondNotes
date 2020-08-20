@@ -13,17 +13,22 @@ body {
   .quotebox {
     height: auto;
     width: 100%;
-    margin-left: 75px;
+    /* margin-left: 75px; */
     /* font-size: 16px; */
-    border: 1px rgb(145, 126, 126) solid;
+    border: 3px rgb(145, 126, 126) solid;
     /* border-radius: 10px; */
-    text-align: right;
-    max-width: 35rem
+    text-align: center;
+    /* max-width: 35rem */
     
+  }
+
+  .quoteContent {
+    margin-top: 30px;
+
   }
   
   #quote {
-    margin: 10px;
+    /* margin: 20px; */
     font-size: 20px;
     text-align: center;
   }
@@ -57,9 +62,10 @@ body {
     border-radius: 5px;
     height: 35px;
     width: 100px;
-    font-weight: 300;
+    font-size: 15px;
+    /* font-weight: bold; */
     font-family: "Segoe UI", "Tahoma", "Geneva", "Verdana", sans-serif;
-    color: white;
+    color: black;
   }
   
   
