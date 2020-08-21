@@ -36,9 +36,13 @@ body {
 
 /* Detail.js */
 
+.form-container {
+  padding-left: 150px;
+}
 .editForm {
   max-width: 75%;
-  /* padding-bottom: 15px; */
+  padding: 25px;
+  margin: 15px;
   background-color: rgb(184, 23, 103);
   border-right: 4.5px inset rgba(224, 92, 136, 0.63);
   border-bottom: 5px outset rgba(167, 37, 117, 0.664);
@@ -56,15 +60,36 @@ body {
 
 .editSaveButton {
   font-size: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
   padding-top: 3px;
   padding-bottom: 5px;
 }
 
-.editPageCorner {
+/* .editPageCorner {
+  position: relative;
   max-width: 15%;
   max-height: 15%;
-  justify-content: flex-end; 
- margin-left: auto;
+  margin-left: auto;
+  left: 0;
+  top: 0;
+  bottom: 5px;
+  right: 5px;
+} */
+
+.div-wrapper {
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+.div-wrapper img {
+  position: relative;
+  max-width: 15%;
+  max-height: 15%;
+  margin-left: auto;
+  left: 0;
+  top: 0;
   bottom: 5px;
   right: 5px;
 }

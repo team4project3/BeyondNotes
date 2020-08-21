@@ -51,7 +51,7 @@ const Detail = props => {
         <form onSubmit={handleSubmit}>
           <Row>
             <div className="col m2 s2" />
-            <div className="container">
+            <div className="container form-container">
               <div className="col m8 s8 editForm">
 
                 <div className="form-group">
@@ -76,10 +76,11 @@ const Detail = props => {
                   <button className="editSaveButton mt-3 mb-3" type="submit">
                     Save
                 </button>
-                <img className="editPageCorner" src={EditPageCorner} alt="page corner"></img>
-
 
                   {/* <Link to="/home" className="backHome">← Back to Dashboard Home</Link> */}
+                </div>
+                <div className="div-wrapper">
+                  <img className="editPageCorner" src={EditPageCorner} alt="page corner"></img>
                 </div>
               </div>
 
