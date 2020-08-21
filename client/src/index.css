@@ -6,26 +6,17 @@ body {
 
 /* Homepage */
 .homeBackground {
-  /* background: url("https://www.w3schools.com/cssref/mountain.jpg") no-repeat; background-size: cover; */
-  /* background: url("../src/img/drywall.jpg") repeat; background-size: cover; */
-  /* background-color: white; */
-  /* background-color:gray; */
-
   min-width: 100%;
   min-height: 100%;
 }
-
 .homeList {
   font-size: 18px;
 }
-
-
 .magentaCard {
   background-color: rgb(184, 23, 103);
   border-right: 4.5px outset rgba(224, 92, 136, 0.63);
   border-bottom: 4.5px outset rgba(167, 37, 117, 0.664);
 }
-
 .magentaPageCorner {
   max-width: 15%;
   max-height: 15%;
@@ -34,15 +25,17 @@ body {
   bottom: 5px;
   right: 5px;
 }
-
-
 .pageCorner {
-max-width: 25%;
-max-height: 25%;
-position: fixed;
-right: 0px;
-bottom: 0px;
+  max-width: 25%;
+  max-height: 25%;
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
 }
+
+/* Detail.js */
+
+
 
 /* Calendar */
 .rbc-calendar {
