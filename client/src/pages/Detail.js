@@ -4,8 +4,8 @@ import { Col, Row, Container } from "../components/Grid";
 import API from "../utils/API";
 import Nav from "../components/Nav";
 import { useStoreContext } from "../utils/GlobalState";
-
 import { SET_CURRENT_POST, UPDATE_POSTS, LOADING } from "../utils/actions";
+import EditPageCorner from "../../src/img/smallCornerMagenta.png";
 
 
 const Detail = props => {
@@ -29,15 +29,16 @@ const Detail = props => {
       title: titleRef.current.value,
       body: bodyRef.current.value,
       author: authorRef.current.value
-      
+
     })
 
-    // State not needed to update on this page
-    
+      // State not needed to update on this page
+
       .catch(err => console.log(err));
 
     titleRef.current.value = "";
     bodyRef.current.value = "";
+    authorRef.current.value = "";
   };
 
 
@@ -45,46 +46,58 @@ const Detail = props => {
   return (
     <>
       <Nav />
-      {state.currentPost ? (
-        <Container fluid>
-          <form onSubmit={handleSubmit}>
-            <Row>
-              <Col size="md-12">
+      {/* {state.currentPost ? ( */}
+      <Container fluid>
+        <form onSubmit={handleSubmit}>
+          <Row>
+            <div className="col m2 s2" />
+            <div className="container">
+              <div className="col m8 s8 editForm">
+
                 <div className="form-group">
-                  <label htmlFor="display_name">Title:</label>
+                  <label className="editLabel" htmlFor="display_name">Title:</label>
                   <input className="form-control" required ref={titleRef} name="display_name" type="text" defaultValue={state.currentPost.title} />
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="about">Detail:</label>
+                  <label className="editLabel" htmlFor="about">Detail:</label>
                   <input name="about" required ref={bodyRef} type="text" defaultValue={state.currentPost.body} />
                   <div id="editor-container">
                   </div>
                 </div>
 
-
                 <div className="form-group">
-                  <label htmlFor="location">Name:</label>
+                  <label className="editLabel" htmlFor="location">Name:</label>
                   <input className="form-control" ref={authorRef} name="location" type="text" defaultValue={state.currentPost.author} />
                 </div>
 
-                <button className="btn btn-success mt-3 mb-3" disabled={state.loading} type="submit">
-                  Save
+
+                <div className="row backHome">
+                  <button className="editSaveButton mt-3 mb-3" type="submit">
+                    Save
                 </button>
+                <img className="editPageCorner" src={EditPageCorner} alt="page corner"></img>
 
-              </Col>
-            </Row>
 
-            <Row>
-              <Col size="md-2">
-                <Link to="/home">← Back to Dashboard Home</Link>
-              </Col>
-            </Row>
-          </form>
-        </Container>
-      ) : (
-          <div>Test</div>
-        )}
+                  {/* <Link to="/home" className="backHome">← Back to Dashboard Home</Link> */}
+                </div>
+              </div>
+
+            </div>
+
+            <div className="col m2 s2" />
+          </Row>
+
+          <Row>
+            <Col size="md-12" className="backHome">
+              <Link to="/home">← Back to Dashboard Home</Link>
+            </Col>
+          </Row>
+        </form>
+      </Container>
+      {/* ) : (
+           <div>Test</div>
+         ) */}
 
     </>
   );

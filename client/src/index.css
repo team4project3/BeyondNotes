@@ -33,8 +33,41 @@ body {
   bottom: 0px;
 }
 
+
 /* Detail.js */
 
+.editForm {
+  max-width: 75%;
+  /* padding-bottom: 15px; */
+  background-color: rgb(184, 23, 103);
+  border-right: 4.5px inset rgba(224, 92, 136, 0.63);
+  border-bottom: 5px outset rgba(167, 37, 117, 0.664);
+}
+
+.editLabel {
+  color: black;
+  font-size: 15px;
+}
+
+.backHome {
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.editSaveButton {
+  font-size: 20px;
+  padding-top: 3px;
+  padding-bottom: 5px;
+}
+
+.editPageCorner {
+  max-width: 15%;
+  max-height: 15%;
+  justify-content: flex-end; 
+ margin-left: auto;
+  bottom: 5px;
+  right: 5px;
+}
 
 
 /* Calendar */
