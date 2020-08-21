@@ -64,7 +64,7 @@ export default class AddContact extends Component {
             ref={contactForm => (this.contactForm = contactForm)}
           >
             <h1>New Contact</h1>
-            <Link to="/" style={{ position: "absolute", top: 40 }}>
+            <Link to="/contacts" style={{ position: "absolute", top: 40 }}>
               <Icon name="back" color="black" className="back-icon" />
             </Link>
             <div id="form-add">
@@ -154,6 +154,8 @@ export const ContactForm = styled.form`
     margin: 0 auto;
     justify-content: center;
     padding: 0 1em;
+    color: black;
+    // text-decoration-color: black;
   }
 
   #form-add label {
@@ -165,6 +167,8 @@ export const ContactForm = styled.form`
     margin: 1.5em auto;
     padding: 0.5em;
     width: 80%;
+    color: black;
+    
   }
 
   #default-img {

@@ -3,16 +3,21 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Contact from "./Contact";
 import { Consumer } from "./ContactsContext"
+import Nav from "./Nav"
 
 class Contacts extends Component {
   render() {
      return (
+       
       <Consumer>
+        
         {({ contacts }) => (
           <ContactsContainer>
+            <Nav />
             <ContactsHeader>
               <h1>Contacts</h1>
             </ContactsHeader>
+            
 
             <Link to="/add">
               <Button>Add contact</Button>
