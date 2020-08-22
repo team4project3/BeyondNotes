@@ -83,7 +83,7 @@ function LoginForm(props) {
         <div className="row">    
             <div className="col s3"></div>
             <div className="col s6">
-            <nav className="navbar grey z-depth-5">
+            <nav className="navbar grey darken-2 z-depth-5">
                     <div className="col s1"></div>
                     <div className="col s10">
                     <div className="flow-text">
@@ -100,7 +100,7 @@ function LoginForm(props) {
         <div className="row">    
                     <div className="col s3"></div>
                     <div className="col s6">
-                    <div className="card grey z-depth-5">
+                    <div className="card grey darken-2 z-depth-5">
     
             <form className="form-group">
 

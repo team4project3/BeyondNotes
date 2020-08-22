@@ -99,7 +99,7 @@ function RegistrationForm(props) {
         <div className="row">    
             <div className="col s3"></div>
             <div className="col s6">
-                <nav className="navbar grey z-depth-3">
+                <nav className="navbar grey darken-2 z-depth-3">
                     <div className="col s1"></div>
                     <div className="col s10">
                     <div className="flow-text">
@@ -115,7 +115,7 @@ function RegistrationForm(props) {
         <div className="row">    
                     <div className="col s3"></div>
                     <div className="col s6">
-                    <div className="card grey z-depth-3">
+                    <div className="card grey darken-2 z-depth-3">
 
             <form className="form-group">
 
