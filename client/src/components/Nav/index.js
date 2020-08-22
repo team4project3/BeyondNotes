@@ -3,7 +3,12 @@ import M from 'materialize-css'
 import 'material-icons/css/material-icons.scss';
 import React, { useEffect, useState } from 'react';
 import NavTime from './NavTime'
+import ImageUpload from '../ImageUpload';
 import { Image } from 'cloudinary-react';
+import WelcomeMessage from "../WelcomeMessage"
+import { useStoreContext } from '../../utils/GlobalState';
+import { GET_USERNAME } from '../../utils/actions';
+import { PromiseProvider } from 'mongoose';
 
 
 

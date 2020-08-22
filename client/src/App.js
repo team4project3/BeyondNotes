@@ -6,6 +6,8 @@ import Detail from "./pages/Detail";
 import Calendar from "./pages/Calendar";
 import NoMatch from "./pages/NoMatch";
 import Upload from './pages/Upload.js';
+// import Gallery from './pages/Gallery.js';
+import Header from './components/Header/Header';
 import Gallery from './pages/Gallery.js';
 import LoginForm from './components/LoginForm/LoginForm';
 import RegistrationForm from './components/RegistrationForm/RegistrationForm';
@@ -47,6 +49,7 @@ function App() {
 
             <Route exact path="/calendar" component={Calendar} />
             <Route exact path="/posts/:id" component={Detail} />
+            {/* <Route exact path="/gallery" component={Gallery} />             */}
 
             <Route exact path="/gallery" component={Gallery} />
             <Route component={Upload} path="/upload" />

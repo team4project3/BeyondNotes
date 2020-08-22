@@ -7,7 +7,9 @@ import {
   ADD_FAVORITE,
   UPDATE_FAVORITES,
   REMOVE_FAVORITE,
-  LOADING
+  LOADING,
+  SET_USERNAME,
+  GET_USERNAME
 } from "./actions";
 
 const StoreContext = createContext();
@@ -72,6 +74,19 @@ const reducer = (state, action) => {
       loading: true
     };
 
+    case SET_USERNAME:
+      return {
+        ...state,
+        username: action.username
+      };
+
+    case GET_USERNAME:
+      return { 
+        
+        ...state,
+      username: state.username
+    };
+
   default:
     return state;
   }
@@ -87,7 +102,8 @@ const StoreProvider = ({ value = [], ...props }) => {
       author: ""
     },
     favorites: [],
-    loading: false
+    loading: false,
+    username: "johndoe1",
   });
 
   return <Provider value={[state, dispatch]} {...props} />;
