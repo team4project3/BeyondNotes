@@ -27,43 +27,16 @@ console.log(users)
 
   useEffect(() => {
       fetchData()
-          // .then(users)
-          // .catch(error => {
-          //     console.warn(JSON.stringify(error, null, 2));
-          // });
+          
   }, []);
 
-
-
-
-
-  // useEffect(() => {
-  //   // const response = await fetch('/api/user_data');
-  //   const response =  fetch('/api/user_data');
-  //   // const users = await response.json();
-  //   const users =  response.json();
-  //   API.getUsers.then((response) => {
-  //     setUsers(users);
-  //     // console.log(username);
-  //     console.log(users);
-  //   });
-  // }, []);
-
-  // async function getUsers() {
-  //   const response = await fetch('/api/user_data');
-  //   const users = await response.json();
-  //   setUsers(users);
-  // }
+  
 
   return (
     <div>
-      <h1>{users.username}</h1>
+      <p>Welcome {users.username}</p>
     </div>
-    // <ul>
-    //   {users.map(user => (
-    //     <li>{user.name}</li>
-    //   ))}
-    // </ul>
+    
   );
 };
 

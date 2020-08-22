@@ -14,28 +14,6 @@ import { PromiseProvider } from 'mongoose';
 
 export default function SideNavBar (){
 
-  // const{username}=useStoreContext()
-  // const [state, dispatch] = useStoreContext();
-
-  // const getUsername = () => {
-  //   dispatch({ type: GET_USERNAME });
-    
-  // };
-
-  // const [username, setUsername] = useState();
-
-  // useEffect(() => {
-  //   const user=getUsername();
-  //   setUsername(user)
-  // }, []);
-  // console.log(username)
-  // const Message = () => {
-  //   return (
-  //     <div>
-  //       <PenList pens={pensList} />
-  //     </div>
-  //   );
-  // }
 
 
   document.addEventListener('DOMContentLoaded', function() {
@@ -55,9 +33,8 @@ export default function SideNavBar (){
                   <img src="assets/beautiful-sea.jpg" />
                   
                 </div>
-                <a href="/upload"><ImageUpload></ImageUpload></a>
-                <a href="#name"><span className="green-text name">John Doe</span></a>
-                <a href="#email"><span className="member-name green-text email">Welcome <WelcomeMessage></WelcomeMessage></span></a>                
+                <a href="/upload"><ImageUpload></ImageUpload></a>                
+                <a href="#email"><span className="member-name green-text email"> <WelcomeMessage></WelcomeMessage></span></a>                
               </div>
             </li>
             
