@@ -26,7 +26,7 @@ export default function SideNavBar() {
             <li>
               <div className="user-view">
                 <div className="background">
-                  <img src="assets/beautiful-sea.jpg" />
+                  <img src="assets/got2.jpg" />
                   
                 </div>
                 <a href="/upload"><ImageUpload></ImageUpload></a>                
