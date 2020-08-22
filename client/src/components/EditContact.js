@@ -31,5 +31,8 @@ const ContactContainer = styled.div`
 
   input {
     width: 90%;
+    color: black;
   }
+
+
 `;

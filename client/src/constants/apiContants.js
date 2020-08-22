@@ -1,4 +1,8 @@
-export const API_BASE_URL = 'http://localhost:3001/api/';
+
+//export const API_BASE_URL = 'http://localhost:3001/api/';
+
+// export const API_BASE_URL = 'http://localhost:3002/api/';
+
 
 // const sendDetailsToServer = () => {
 //     if(state.email.length && state.password.length) {

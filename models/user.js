@@ -2,11 +2,11 @@ var mongoose = require("mongoose"),
 //require mongoose
     Schema = mongoose.Schema,
     // Requiring bcrypt for password hashing. Using the bcryptjs version as the regular bcrypt module sometimes causes errors on Windows machines
-    bcrypt = require("bcrypt"),
+    bcrypt = require("bcryptjs"),
     SALT_WORK_FACTOR = 10;
 
 var UserSchema = new Schema({
-    username: { type: String, required: true, index: { unique: true } },
+    email: { type: String, required: true, index: { unique: true } },
     password: { type: String, required: true }
 });
 
@@ -33,11 +33,9 @@ bcrypt.genSalt(SALT_WORK_FACTOR, function(err, salt) {
 
 });
 
-UserSchema.methods.comparePassword = function(candidatePassword, cb) {
-    bcrypt.compare(candidatePassword, this.password, function(err, isMatch) {
-        if (err) return cb(err);
-        cb(null, isMatch);
-    });
+UserSchema.methods.validPassword = function(candidatePassword) {
+    return bcrypt.compareSync(candidatePassword, this.password
+    )
 };
 
 module.exports = mongoose.model("User", UserSchema);

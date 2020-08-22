@@ -64,7 +64,7 @@ export default class AddContact extends Component {
             ref={contactForm => (this.contactForm = contactForm)}
           >
             <h1>New Contact</h1>
-            <Link to="/" style={{ position: "absolute", top: 40 }}>
+            <Link to="/contacts" style={{ position: "absolute", top: 40 }}>
               <Icon name="back" color="black" className="back-icon" />
             </Link>
             <div id="form-add">
@@ -137,6 +137,7 @@ export const ContactForm = styled.form`
   color: black;
   width: 50%;
   justify-content: center;
+  box-shadow: 10px 10px 5px rgba(78, 46, 31, 0.5);
 
   svg {
     margin-top: 10px;
@@ -154,10 +155,13 @@ export const ContactForm = styled.form`
     margin: 0 auto;
     justify-content: center;
     padding: 0 1em;
+    color: black;
+    // text-decoration-color: black;
   }
 
   #form-add label {
     margin-left: 1.8em;
+    
   }
 
   input {
@@ -165,10 +169,13 @@ export const ContactForm = styled.form`
     margin: 1.5em auto;
     padding: 0.5em;
     width: 80%;
+    color: black;
+    
   }
 
   #default-img {
     width: auto;
+    font-size: 20px;
     padding: 0.4em;
     background: lightgreen;
     border-radius: 4px;
@@ -185,7 +192,7 @@ const ContactButton = styled.button`
   margin: 0 1em;
   background: ${props => props.color};
   padding: 0.5em;
-  border-radius: px;
+  border-radius: 4px;
   &:hover {
     cursor: pointer;
   }

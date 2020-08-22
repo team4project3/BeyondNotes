@@ -41,9 +41,9 @@ function RegistrationForm(props) {
                 "email":state.email,
                 "password":state.password,
             }
-            axios.post(API_BASE_URL+'register', payload)
+            axios.post("/api/register", payload)
                 .then(function (response) {
-                    if(response.data.code === 200){
+                    if(response.status === 200){
                         setState(prevState => ({
                             ...prevState,
                             'successMessage' : 'Registration successful. Redirecting to home page..'
