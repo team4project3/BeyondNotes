@@ -1,0 +1,9 @@
+.noteListContent {
+    /* background-color: darkolivegreen; */
+    background-color: darkorange;
+}
+
+.emptyNoteList {
+    text-align: center;
+    font-weight: lighter;
+}

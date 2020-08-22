@@ -5,11 +5,10 @@ import { Link } from "react-router-dom";
 import { useStoreContext } from "../../utils/GlobalState";
 import { REMOVE_POST, UPDATE_POSTS, LOADING } from "../../utils/actions";
 import API from "../../utils/API";
-// import PostIt from "../PostsList/postit.jpg";
-// import PenPaper from "../PostsList/penpaper.jpg";
-import Slider from "../Carousel"
+import "./postlist.css";
 
-function PostsList() {
+const NoteList = () => {
+
   const [state, dispatch] = useStoreContext();
 
   const removePost = id => {
@@ -40,53 +39,113 @@ function PostsList() {
   }, []);
 
   return (
-    <div>
+    <>
+      <div className="container mb-5 mt-5">
+        {/* <h2 className="text-center">Note List:</h2> */}
+        <div className="card z-depth-4">
+          <div className="card-content noteListContent">
 
-      <Slider />
-      {/* <div class="card-image">
-          <img src={PenPaper} />
-          <span class="card-title">Test Text</span>
-        </div> */}
+            {state.posts.length ? (
 
-      <div className="card blue-grey darken-1 z-depth-4">
-        <div className="card-content">
-          {/* <h4 className="dashboardH3">Click on a note to view</h4> */}
-          {state.posts.length ? (
-            <List>
-              {state.posts.map(post => (
-                <ListItem key={post._id}>
-                  <Link to={"/posts/" + post._id}>
-                    <strong>
-                      {post.title} by {post.author}
-                    </strong>
-                  </Link>
-                  <DeleteBtn onClick={() => removePost(post._id)} />
-                </ListItem>
-              ))}
-            </List>
-          ) : (
-              <h4 className="dashboardH3">Memos are Clear for Now</h4>
-            )}
-        </div>
+              <List>
+                {state.posts.map(post => (
+                  <ListItem key={post._id}>
+                    <Link to={"/posts/" + post._id}>
+                      <strong>
+                        {post.title} : {post.body} | {post.author}
+                      </strong>
+                    </Link>
+                    <DeleteBtn onClick={() => removePost(post._id)} />
+                  </ListItem>
+                ))}
+              </List>
+            ) : (
+                <h4 className="emptyNoteList">Note List is Empty for Now!</h4>
+              )}
+          </div>
 
-        <div className="card-action">
-          <div className="mt-5 viewImportant">
-            <Link to="favorites">View Important Items</Link>
-          </div>
-          <div className="mt-5 viewImportant">
-            <Link to="calendar">View Calendar</Link>
-          </div>
-          <div className="mt-5 viewImportant">
-            <Link to="register">Register</Link>
-          </div>
-          <div className="mt-5 viewImportant">
-            <Link to="login">Login In</Link>
-          </div>
+          {/* <div className="mt-5">
+            <Link to="home">Back to home</Link>
+          </div> */}
         </div>
       </div>
-
-    </div>
+    </>
   );
-}
+};
 
-export default PostsList;
+export default NoteList;
+
+
+
+// import React, { useEffect } from "react";
+// // import { ListItem, List } from "../List";
+// // import DeleteBtn from "../DeleteBtn";
+// // import { Link } from "react-router-dom";
+// import { useStoreContext } from "../../utils/GlobalState";
+// import { REMOVE_POST, UPDATE_POSTS, LOADING } from "../../utils/actions";
+// import API from "../../utils/API";
+// // import Slider from "../Carousel"
+// import Quotes from "../Quotes/Quote";
+
+
+// function PostsList() {
+//   const [state, dispatch] = useStoreContext();
+
+//   const removePost = id => {
+//     API.deletePost(id)
+//       .then(() => {
+//         dispatch({
+//           type: REMOVE_POST,
+//           _id: id
+//         });
+//       })
+//       .catch(err => console.log(err));
+//   };
+
+//   const getPosts = () => {
+//     dispatch({ type: LOADING });
+//     API.getPosts()
+//       .then(results => {
+//         dispatch({
+//           type: UPDATE_POSTS,
+//           posts: results.data
+//         });
+//       })
+//       .catch(err => console.log(err));
+//   };
+
+//   useEffect(() => {
+//     getPosts();
+//   }, []);
+
+//   return (
+//     <div>
+//       {/* Carousel */}
+//       {/* <Slider /> */}
+
+//     </div>
+//   );
+// }
+
+// export default PostsList;
+
+
+// {state.posts.length ? (
+//   <List>
+//     <h4 className="dashboardH3">Click on a Note to Edit</h4>
+
+//     {state.posts.map(post => (
+//       <ListItem key={post._id}>
+//         {/* <Link to={"/notelist/"}> */}
+//         <Link to={"/posts/" + post._id}>
+//           <strong>
+//             {post.title} - {post.body}. Entered By: {post.author}
+//           </strong>
+//         </Link>
+//         <DeleteBtn onClick={() => removePost(post._id)} />
+//       </ListItem>
+//     ))}
+//   </List>
+// ) : (
+//     <h4 className="dashboardH3">Your Note List is Empty</h4>
+//   )}

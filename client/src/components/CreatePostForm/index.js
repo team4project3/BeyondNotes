@@ -2,8 +2,11 @@ import React, { useRef } from "react";
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_POST, LOADING } from "../../utils/actions";
 import API from "../../utils/API";
-import { Link } from "react-router-dom";
 import "./style.css";
+import Corner from "../../img/smallCornerOrange.png"
+// import Corner from "../../img/corner.png"
+// import Corner from "../../img/smallCornerMagenta.png"
+// import { Link } from "react-router-dom";
 
 
 function CreatePostForm() {
@@ -22,6 +25,7 @@ function CreatePostForm() {
     })
       .then(result => {
         dispatch({
+          // type: ADD_FAVORITE,
           type: ADD_POST,
           post: result.data
         });
@@ -30,47 +34,54 @@ function CreatePostForm() {
 
     titleRef.current.value = "";
     bodyRef.current.value = "";
+    authorRef.current.value = "";
   };
 
   return (
     <>
-      <div className="card orange z-depth-3">
-        <div className="card-content white-text">
 
-          <span class="card-title">What's on Your List Today?</span>
-          <form className="form-group mt-3 mb-3" onSubmit={handleSubmit}>
+      <div className="card orange z-depth-3">
+        <div className="card-content">
+          <span className="card-title noteBox">Need to Add a Note?</span>
+          <form className="form-group mt-3 mb-3 formBox" onSubmit={handleSubmit}>
             <input className="form-control mb-3" required ref={titleRef} placeholder="Title" />
-            <textarea className="form-control mb-3" required ref={bodyRef} placeholder="Body" />
+            <textarea className="form-control mb-3 bodyPlaceholder" required ref={bodyRef} placeholder="Body" />
             <input className="form-control mb-3" ref={authorRef} placeholder="Name" />
 
-            <button className="btn btn-success mt-3 mb-3" disabled={state.loading} type="submit">
+            <button className="orangeAddButton" type="submit">
               Add
             </button>
           </form>
         </div>
+        <img className="orangePageCorner" src={Corner} alt="orange page corner"></img>
+
       </div>
 
-      <div className="card magentaCard z-depth-3">
-        <div className="card-content white-text">
-          <div className="card-action">
-            <div className="mt-5 homeList">
-              <Link to="favorites">Important</Link>
-            </div>
-            <div className="mt-5 homeList">
-              <Link to="calendar">Calendar</Link>
-            </div>
-            <div className="mt-5 homeList">
-              <Link to="register">Register</Link>
-            </div>
-            <div className="mt-5 homeList">
-              <Link to="login">Login</Link>
-            </div>
-          </div>
-
-        </div>
-      </div>
     </>
   );
 }
 
 export default CreatePostForm;
+
+      {/* <div className="card magentaCard z-depth-3">
+        <div className="container">
+          <div className="card-content">
+            <h5>View: </h5>
+            <div className="card-action">
+              <div className="mt-5 homeList">
+                <Link to="notelist">&#8226; Notes</Link>
+              </div>
+              <div className="mt-5 homeList">
+                <Link to="calendar">&#8226; Calendar</Link>
+              </div>
+              <div className="mt-5 homeList">
+                <Link to="gallery">&#8226; Photo Gallery</Link>
+              </div>
+              <div className="mt-5 homeList">
+                <Link to="login">&#8226; Log Out</Link>
+              </div>
+            </div>
+            <img className="magentaPageCorner" src={Corner} alt="page corner"></img>
+          </div>
+        </div>
+      </div> */}

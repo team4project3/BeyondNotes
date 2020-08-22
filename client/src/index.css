@@ -4,12 +4,105 @@ body {
   font-family: sans-serif;
 }
 
-.homeBackground {
-  /* background: url("https://www.w3schools.com/cssref/mountain.jpg") no-repeat; background-size: cover; */
-  background: url("../src/img/drywall.jpg") repeat; background-size: cover;
-  /* background-color:gray; */
-  min-width: 100%;
-  min-height: 100%;
+/*---------Homepage----------*/
+
+.homeList {
+  font-size: 18px;
 }
+.magentaCard {
+  background-color: rgb(184, 23, 103);
+  border-right: 4.5px outset rgba(224, 92, 136, 0.63);
+  border-bottom: 4.5px outset rgba(167, 37, 117, 0.664);
+}
+.magentaPageCorner {
+  max-width: 15%;
+  max-height: 15%;
+  position: absolute;
+  align-items: right;
+  bottom: 5px;
+  right: 5px;
+}
+
+/*-----Home Page Corner Image------*/
+.pageCorner {
+  max-width: 25%;
+  max-height: 25%;
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+}
+
+
+/*------------Detail.js/Edit Note Page---------- */
+.form-container {
+  padding-left: 150px;
+}
+.editForm {
+  max-width: 75%;
+  padding: 25px;
+  margin: 15px;
+  background-color: rgb(184, 23, 103);
+  border-top: 1.5px solid rgba(224, 92, 136, 0.63);
+  border-right: 4.5px inset rgba(224, 92, 136, 0.63);
+  border-bottom: 5px outset rgba(167, 37, 117, 0.664);
+}
+
+.editLabel {
+  color: black;
+  font-size: 15px;
+}
+
+.backHome {
+  padding-bottom: 15px;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.editSaveButton {
+  font-size: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding-top: 3px;
+  padding-bottom: 5px;
+}
+
+.editPageCorner {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+} 
+
+.div-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.div-wrapper img {
+  margin-left: auto;
+  bottom: 0px;
+  right: 0px;
+}
+
+
+/*-------------Calendar------------*/
+.rbc-calendar {
+  background-color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.rbc-event-content {
+  background-color: orange;
+}
+
+.rbc-btn-group {
+  background-color: #f077f2;
+}
+
+/* .rbc-event {
+  background-color: orange;
+} */
 
 
