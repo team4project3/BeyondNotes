@@ -73,15 +73,20 @@ const Detail = props => {
 
 
                 <div className="row backHome">
+
                   <button className="editSaveButton mt-3 mb-3" type="submit">
                     Save
-                </button>
+                  </button>
+
+                  <div className="div-wrapper">
+                    <img className="editPageCorner" src={EditPageCorner} alt="page corner"></img>
+                  </div>
 
                   {/* <Link to="/home" className="backHome">← Back to Dashboard Home</Link> */}
                 </div>
-                <div className="div-wrapper">
+                {/* <div className="div-wrapper">
                   <img className="editPageCorner" src={EditPageCorner} alt="page corner"></img>
-                </div>
+                </div> */}
               </div>
 
             </div>
