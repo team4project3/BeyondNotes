@@ -5,10 +5,38 @@ import React, {  useEffect, useState } from 'react';
 import NavTime from './NavTime'
 import ImageUpload from '../ImageUpload';
 import { Image } from 'cloudinary-react';
+import WelcomeMessage from "../WelcomeMessage"
+import { useStoreContext } from '../../utils/GlobalState';
+import { GET_USERNAME } from '../../utils/actions';
+import { PromiseProvider } from 'mongoose';
 
 
 
 export default function SideNavBar (){
+
+  // const{username}=useStoreContext()
+  // const [state, dispatch] = useStoreContext();
+
+  // const getUsername = () => {
+  //   dispatch({ type: GET_USERNAME });
+    
+  // };
+
+  // const [username, setUsername] = useState();
+
+  // useEffect(() => {
+  //   const user=getUsername();
+  //   setUsername(user)
+  // }, []);
+  // console.log(username)
+  // const Message = () => {
+  //   return (
+  //     <div>
+  //       <PenList pens={pensList} />
+  //     </div>
+  //   );
+  // }
+
 
   document.addEventListener('DOMContentLoaded', function() {
         var elems = document.querySelectorAll('.sidenav');
@@ -29,7 +57,7 @@ export default function SideNavBar (){
                 </div>
                 <a href="/upload"><ImageUpload></ImageUpload></a>
                 <a href="#name"><span className="green-text name">John Doe</span></a>
-                <a href="#email"><span className="green-text email">jdandturk@gmail.com</span></a>
+                <a href="#email"><span className="member-name green-text email">Welcome <WelcomeMessage></WelcomeMessage></span></a>                
               </div>
             </li>
             
