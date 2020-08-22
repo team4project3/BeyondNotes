@@ -69,7 +69,7 @@ export default function Upload() {
                     name="image"
                     onChange={handleFileInputChange}
                     value={fileInputState}
-                    className="form-input "
+                    className="form-input"
                     
                 />
                 <button className="btn orange lighten-2" type="submit">
