@@ -22,7 +22,7 @@
 
 
 ## User Story :
-* AS A person looking for an organization tool, 
+* AS A person with a busy schedule, time management plays an important role. 
 * I WANT an application where I can add my thoughts or notes, schedule my events and tasks, and create my own profile to log into 
 * SO THAT I can be more productive with my work team, personal schedule, or events. 
 
