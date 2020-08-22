@@ -45,12 +45,16 @@ export default function SideNavBar() {
           <li><a href="/login"><i className="material-icons">rotate_left</i>Logout</a></li>
           
           <br></br>
-          {/* <li><div className="divider" /></li> */}
-          <li className="black-text">
-            <div className="copyright">
-              
-                  Copyright © All rights reserved |   
-              
+          <li><div className="divider" /></li>
+          <li className="lead center align black-text">
+            <div className="copyright">              
+                 <small>
+                    © 2020 Beyond Notes Project Team:
+                  <a className="lead center align blue-text" href="https://github.com/Jones-M12" target="_blank" rel="noopener noreferrer">Malesha Jones</a>
+                  <a className="lead center align blue-text" href="https://github.com/cheryld433" target="_blank" rel="noopener noreferrer">Cheryl Daniels</a>
+                  <a className="lead center align blue-text" href="https://github.com/AFeese" target="_blank" rel="noopener noreferrer">Ashley Feese</a>
+                  <a className="lead center align blue-text" href="https://github.com/TravisLovingood" target="_blank" rel="noopener noreferrer">Travis Lovingood</a>                   
+                </small>                                
             </div>
           </li>
 
