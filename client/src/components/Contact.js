@@ -97,11 +97,14 @@ const ContactContainer = styled.div`
   margin: 1em auto;
   padding: 0.5em;
   background: whitesmoke;
+  border: 1px solid black;
+
   width: 80%;
   border-radius: 5px;
   color: black;
   div#details {
     text-align: center;
+    text-size: auto;
     padding: 0.3em;
   }
 
@@ -111,12 +114,13 @@ const ContactContainer = styled.div`
     justify-content: center;
     margin: 0 auto;
 
+
     button {
       padding: 0.1em;
       color: white;
       width: 60px;
       margin: 0 1em;
-      border: none;
+      box-shadow: 10px 10px 5px rgba(78, 46, 31, 0.2);
       border-radius: 0px;
       &:hover {
         transform: scale(1.2);
@@ -127,12 +131,12 @@ const ContactContainer = styled.div`
 
     #remove {
       background: #eb8334;
-      font-size: 16px;
+      font-size: 14px;
     }
 
     #edit {
       background: #eb349b;
-      font-size: 16px;
+      font-size: 14px;
     }
   }
 `;
@@ -140,6 +144,7 @@ const ContactContainer = styled.div`
 export const ContactImageContainer = styled.div`
   width: 100px;
   height: 100px;
+  box-shadow: 10px 10px 5px rgba(78, 46, 31, 0.5);
   // clip-path: circle(50% at 50% 50%);
   margin: 0 auto;
   img {

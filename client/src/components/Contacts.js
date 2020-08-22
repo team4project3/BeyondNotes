@@ -3,19 +3,24 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Contact from "./Contact";
 import { Consumer } from "./ContactsContext"
+import Nav from "./Nav"
 
 class Contacts extends Component {
   render() {
      return (
+       
       <Consumer>
+        
         {({ contacts }) => (
           <ContactsContainer>
+            <Nav />
             <ContactsHeader>
               <h1>Contacts</h1>
             </ContactsHeader>
+            
 
             <Link to="/add">
-              <Button>Add contact</Button>
+              <Button className="add-btn">Add contact</Button>
             </Link>
 
             <div id="contacts">
@@ -44,7 +49,9 @@ const ContactsContainer = styled.div`
   margin: 0 auto;
   color: whitesmoke;
   padding: 1.5em;
-  background: #e98feb;
+  background: #de6ce0;
+  box-shadow: 10px 10px 5px rgba(78, 46, 31, 0.5);
+
   #contacts {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -54,6 +61,7 @@ const ContactsContainer = styled.div`
 const ContactsHeader = styled.div`
   margin: 1.5em auto;
   text-align: center;
+  border: 2px solid border;
 `;
 
 export const Button = styled.button`
@@ -61,8 +69,9 @@ export const Button = styled.button`
   color: whitesmoke;
   padding: 0.7em;
   width: 15%;
-  border: none;
-  border-radius: 2px;
+  box-shadow: 10px 10px 5px rgba(78, 46, 31, 0.5);
+  border:  1px solid black;
+  border-radius: 4px;
   display: block;
   margin: 1em auto;
   &:hover {

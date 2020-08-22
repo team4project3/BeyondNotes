@@ -91,6 +91,8 @@ body {
   background-color: white;
   font-size: 12px;
   font-weight: bold;
+  box-shadow: 10px 10px 5px rgba(78, 46, 31, 0.5);
+  
 }
 
 .rbc-event-content {
@@ -98,11 +100,15 @@ body {
 }
 
 .rbc-btn-group {
-  background-color: #f077f2;
+  /* background-color: #a0f277; */
+  /* background-color: #77bbf2; */
+  background-color: #ef4df2;
+
 }
 
 /* .rbc-event {
   background-color: orange;
 } */
+
 
 
