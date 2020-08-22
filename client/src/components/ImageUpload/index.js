@@ -28,7 +28,7 @@ export default function Gallery() {
                             key={index}
                             cloudName={process.env.REACT_APP_CLOUDINARY_NAME}
                             publicId={imageId}
-                            width="150"
+                            width="200"
                             crop="scale"
                         />
                     ))}
