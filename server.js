@@ -2,7 +2,10 @@
 const { cloudinary } = require('./client/src/utils/cloudinary');
 const express = require("express");
 const mongoose = require("mongoose");
+const postRoutes = require("./routes");
 const routes = require("./routes/api-routes");
+// const route = require("./routes/api");
+
 
 const app = express();
 var cors = require('cors');
@@ -60,8 +63,8 @@ app.post('/api/upload', async (req, res) => {
 
 
 // Add routes, both API and view
-// app.use(routes);
 routes(app)
+app.use(postRoutes);
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactcms");
