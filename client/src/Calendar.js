@@ -34,31 +34,10 @@ function isValidView(view, { views: _views }) {
   return names.indexOf(view) !== -1
 }
 
-/**
- * react-big-calendar is a full featured Calendar component for managing events and dates. It uses
- * modern `flexbox` for layout, making it super responsive and performant. Leaving most of the layout heavy lifting
- * to the browser. __note:__ The default styles use `height: 100%` which means your container must set an explicit
- * height (feel free to adjust the styles to suit your specific needs).
- *
- * Big Calendar is unopiniated about editing and moving events, preferring to let you implement it in a way that makes
- * the most sense to your app. It also tries not to be prescriptive about your event data structures, just tell it
- * how to find the start and end datetimes and you can pass it whatever you want.
- *
- * One thing to note is that, `react-big-calendar` treats event start/end dates as an _exclusive_ range.
- * which means that the event spans up to, but not including, the end date. In the case
- * of displaying events on whole days, end dates are rounded _up_ to the next day. So an
- * event ending on `Apr 8th 12:00:00 am` will not appear on the 8th, whereas one ending
- * on `Apr 8th 12:01:00 am` will. If you want _inclusive_ ranges consider providing a
- * function `endAccessor` that returns the end date + 1 day for those events that end at midnight.
- */
 class Calendar extends React.Component {
   static propTypes = {
     localizer: PropTypes.object.isRequired,
 
-    /**
-     * Props passed to main calendar `<div>`.
-     *
-     */
     elementProps: PropTypes.object,
 
     /**
@@ -85,31 +64,6 @@ class Calendar extends React.Component {
      */
     defaultView: PropTypes.string,
 
-    /**
-     * An array of event objects to display on the calendar. Events objects
-     * can be any shape, as long as the Calendar knows how to retrieve the
-     * following details of the event:
-     *
-     *  - start time
-     *  - end time
-     *  - title
-     *  - whether its an "all day" event or not
-     *  - any resource the event may be related to
-     *
-     * Each of these properties can be customized or generated dynamically by
-     * setting the various "accessor" props. Without any configuration the default
-     * event should look like:
-     *
-     * ```js
-     * Event {
-     *   title: string,
-     *   start: Date,
-     *   end: Date,
-     *   allDay?: boolean
-     *   resource?: any,
-     * }
-     * ```
-     */
     events: PropTypes.arrayOf(PropTypes.object),
 
     /**
@@ -181,13 +135,6 @@ class Calendar extends React.Component {
      * @type {(func|string)}
      */
     resourceAccessor: accessor,
-
-    /**
-     * An array of resource objects that map events to a specific resource.
-     * Resource objects, like events, can be any shape or have any properties,
-     * but should be uniquly identifiable via the `resourceIdAccessor`, as
-     * well as a "title" or name as provided by the `resourceTitleAccessor` prop.
-     */
     resources: PropTypes.arrayOf(PropTypes.object),
 
     /**
@@ -247,49 +194,10 @@ class Calendar extends React.Component {
      */
     onDrillDown: PropTypes.func,
 
-    /**
-     *
-     * ```js
-     * (dates: Date[] | { start: Date; end: Date }, view: 'month'|'week'|'work_week'|'day'|'agenda'|undefined) => void
-     * ```
-     *
-     * Callback fired when the visible date range changes. Returns an Array of dates
-     * or an object with start and end dates for BUILTIN views. Optionally new `view`
-     * will be returned when callback called after view change.
-     *
-     * Custom views may return something different.
-     */
+   
     onRangeChange: PropTypes.func,
 
-    /**
-     * A callback fired when a date selection is made. Only fires when `selectable` is `true`.
-     *
-     * ```js
-     * (
-     *   slotInfo: {
-     *     start: Date,
-     *     end: Date,
-     *     resourceId:  (number|string),
-     *     slots: Array<Date>,
-     *     action: "select" | "click" | "doubleClick",
-     *     bounds: ?{ // For "select" action
-     *       x: number,
-     *       y: number,
-     *       top: number,
-     *       right: number,
-     *       left: number,
-     *       bottom: number,
-     *     },
-     *     box: ?{ // For "click" or "doubleClick" actions
-     *       clientX: number,
-     *       clientY: number,
-     *       x: number,
-     *       y: number,
-     *     },
-     *   }
-     * ) => any
-     * ```
-     */
+
     onSelectSlot: PropTypes.func,
 
     /**
@@ -642,42 +550,6 @@ class Calendar extends React.Component {
       eventTimeRangeEndFormat: dateFormat,
     }),
 
-    /**
-     * Customize how different sections of the calendar render by providing custom Components.
-     * In particular the `Event` component can be specified for the entire calendar, or you can
-     * provide an individual component for each view type.
-     *
-     * ```jsx
-     * let components = {
-     *   event: MyEvent, // used by each view (Month, Day, Week)
-     *   eventWrapper: MyEventWrapper,
-     *   eventContainerWrapper: MyEventContainerWrapper,
-     *   dateCellWrapper: MyDateCellWrapper,
-     *   timeSlotWrapper: MyTimeSlotWrapper,
-     *   timeGutterHeader: MyTimeGutterWrapper,
-     *   toolbar: MyToolbar,
-     *   agenda: {
-     *   	 event: MyAgendaEvent // with the agenda view use a different component to render events
-     *     time: MyAgendaTime,
-     *     date: MyAgendaDate,
-     *   },
-     *   day: {
-     *     header: MyDayHeader,
-     *     event: MyDayEvent,
-     *   },
-     *   week: {
-     *     header: MyWeekHeader,
-     *     event: MyWeekEvent,
-     *   },
-     *   month: {
-     *     header: MyMonthHeader,
-     *     dateHeader: MyMonthDateHeader,
-     *     event: MyMonthEvent,
-     *   }
-     * }
-     * <Calendar components={components} />
-     * ```
-     */
     components: PropTypes.shape({
       event: PropTypes.elementType,
       eventWrapper: PropTypes.elementType,
@@ -710,9 +582,6 @@ class Calendar extends React.Component {
       }),
     }),
 
-    /**
-     * String messages used throughout the component, override to provide localizations
-     */
     messages: PropTypes.shape({
       allDay: PropTypes.node,
       previous: PropTypes.node,
@@ -729,12 +598,7 @@ class Calendar extends React.Component {
       showMore: PropTypes.func,
     }),
 
-    /**
-     * A day event layout(arrangement) algorithm.
-     * `overlap` allows events to be overlapped.
-     * `no-overlap` resizes events to avoid overlap.
-     * or custom `Function(events, minimumStartDifference, slotMetrics, accessors)`
-     */
+   
     dayLayoutAlgorithm: DayLayoutAlgorithmPropType,
   }
 

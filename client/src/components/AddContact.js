@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { Consumer } from "./ContactsContext";
 import Icon from "./elements/Icon";
 
+const contacts = JSON.parse(localStorage.getItem("contacts")) || [];
+
 export default class AddContact extends Component {
   state = {
     id: Math.round(Math.random() * 100000000),
@@ -48,11 +50,18 @@ export default class AddContact extends Component {
     this.setState({
       [e.target.name]: e.target.value
     });
+  
+  
   };
   handleSubmit = (e, action) => {
     e.preventDefault();
     this.contactForm.reset();
     action(this.state);
+
+    
+
+    contacts.push(this.state)
+      localStorage.setItem("contacts", JSON.stringify(contacts));
   };
 
   render() {
@@ -175,6 +184,7 @@ export const ContactForm = styled.form`
 
   #default-img {
     width: auto;
+    height: fixed;
     font-size: 20px;
     padding: 0.4em;
     background: lightgreen;

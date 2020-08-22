@@ -37,7 +37,7 @@ class Contacts extends Component {
               ))}
             </div>
           </ContactsContainer>
-       )} 
+    )}
       </Consumer>
     );
   }

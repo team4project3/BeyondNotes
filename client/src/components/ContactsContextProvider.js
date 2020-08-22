@@ -1,17 +1,18 @@
 import React, { Component } from "react";
 import { Provider } from "./ContactsContext";
-import { formatter } from "../helpers";
+// import { formatter } from "../helpers";
 
 export default class ContactsContextProvider extends Component {
   state = {
     contacts: []
   };
   componentDidMount = async () => {
-    const randomPeopleRes = await fetch(
-      "https://randomuser.me/api/?page=1&results=6&seed=abc"
-    ).then(data => data.json());
-    const { results: randomPeople } = randomPeopleRes;
-    this.setState({ contacts: formatter(randomPeople) });
+    // const randomPeopleRes = await fetch(
+    //   "https://randomuser.me/api/?page=1&results=6&seed=abc"
+    // ).then(data => data.json());
+    // const { results: randomPeople } = randomPeopleRes;
+    const contacts = JSON.parse(localStorage.getItem("contacts")) || [];
+    this.setState({ contacts: contacts });
   };
 
   removeContact = id => {
