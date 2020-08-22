@@ -57,8 +57,9 @@ export default function Upload() {
     return (
         <>
         <Nav/>
-        <div>
-            <h1 className="title">Upload an Image</h1>
+        <br></br>
+        <div className="card-panel m9 grey darken-2">
+            <h1 className="title green-text">Upload an Image</h1>
             <Alert msg={errMsg} type="danger" />
             <Alert msg={successMsg} type="success" />
             <form onSubmit={handleSubmitFile} className="form">
@@ -68,9 +69,10 @@ export default function Upload() {
                     name="image"
                     onChange={handleFileInputChange}
                     value={fileInputState}
-                    className="form-input"
+                    className="form-input "
+                    
                 />
-                <button className="btn" type="submit">
+                <button className="btn orange lighten-2" type="submit">
                     Submit
                 </button>
             </form>
