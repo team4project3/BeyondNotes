@@ -6,7 +6,7 @@ import PostsList from "../components/PostsList";
 import Nav from "../components/Nav";
 import Quotes from "../components/Quotes/Quote";
 import Corner from "../img/smallCorner.png"
-import MagentaCorner from "../img/smallCornerMagenta.png" 
+import MagentaCorner from "../img/smallCornerMagenta.png"
 import { Link } from "react-router-dom";
 import "../index.css"
 
@@ -14,12 +14,10 @@ import "../index.css"
 const Home = () => {
   return (
     <>
+      <Nav />
       <div className="homeBackground">
-        <Nav />
 
         <div className="row homeRow z-depth-4">
-          {/* <div className="row card homeRow blue-grey darken-1 z-depth-4"> */}
-          {/* <h1 className="dashboard-title">Dashboard</h1> */}
           <div className="col m4 s6">
             <div className="card z-depth-3">
               <div className="card-content magentaCard z-depth-4">
@@ -40,13 +38,10 @@ const Home = () => {
             </div>
           </div>
           <div className="col m8 s6">
-            {/* <div className="card-content z-depth-4"> */}
-              <Quotes />
-            {/* </div> */}
+            <Quotes />
           </div>
         </div>
 
-        {/* <div className="row card homeRow blue-grey darken-1 z-depth-3"> */}
         <div className="row homeRow z-depth-3">
           <div className="col m4 s6">
 

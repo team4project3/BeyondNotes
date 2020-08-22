@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Image } from 'cloudinary-react';
-import Nav from "../components/Nav";
 
 
 export default function Gallery() {
     const [imageIds, setImageIds] = useState();
+    // const= currentValue
     const loadImages = async () => {
         try {
             const res = await fetch('/api/images');
@@ -19,17 +19,16 @@ export default function Gallery() {
     }, []);
     return (
         <>
-        <Nav/>
-        <div>
-            <h1 className="title">Cloudinary Gallery</h1>
+        
+        <div>            
             <div className="gallery">
                 {imageIds &&
-                    imageIds.map((imageId, index) => (
+                    imageIds.map((imageId, index, ) => (
                         <Image
                             key={index}
                             cloudName={process.env.REACT_APP_CLOUDINARY_NAME}
                             publicId={imageId}
-                            width="300"
+                            width="150"
                             crop="scale"
                         />
                     ))}

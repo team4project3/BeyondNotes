@@ -2,7 +2,7 @@
 const { cloudinary } = require('./client/src/utils/cloudinary');
 const express = require("express");
 const mongoose = require("mongoose");
-const routes = require("./routes");
+const routes = require("./routes/api-routes");
 
 const app = express();
 var cors = require('cors');
@@ -12,8 +12,8 @@ const session = require("express-session");
 const passport = require("./config/passport");
 
 //set image upload size
-app.use(express.json({ limit: '50mb' }));
-app.use(express.urlencoded({ limit: '50mb', extended: true }));
+app.use(express.json({ limit: '300mb' }));
+app.use(express.urlencoded({ limit: '300mb', extended: true }));
 app.use(cors());
 
 app.use(express.static("public"));
@@ -34,12 +34,14 @@ app.use(passport.session());
 app.get('/api/images', async (req, res) => {
   const { resources } = await cloudinary.search
       .expression('folder:imageupload')
-      .sort_by('public_id', 'desc')
-      .max_results(5)
+       
+      .sort_by('created_at', 'desc')
+      .max_results(1)
       .execute();
 //sends back an array of ID's to be tested on the front end (localhost:3001/api/images)
   const publicIds = resources.map((file) => file.public_id);
   res.send(publicIds);
+  console.log(resources)
 });
 app.post('/api/upload', async (req, res) => {
   try {
@@ -49,7 +51,7 @@ app.post('/api/upload', async (req, res) => {
           upload_preset: 'imageupload',
       });
       console.log(uploadResponse);
-      res.json({ msg: 'Awesome--> Image loaded' });
+      res.json({ uploadResponse });
   } catch (err) {
       console.error(err);
       res.status(500).json({ err: 'Uh Oh Danger Sir Robinson Danger---> failed' });
@@ -58,7 +60,8 @@ app.post('/api/upload', async (req, res) => {
 
 
 // Add routes, both API and view
-app.use(routes);
+// app.use(routes);
+routes(app)
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactcms");

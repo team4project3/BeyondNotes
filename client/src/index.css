@@ -4,11 +4,8 @@ body {
   font-family: sans-serif;
 }
 
-/* Homepage */
-.homeBackground {
-  min-width: 100%;
-  min-height: 100%;
-}
+/*---------Homepage----------*/
+
 .homeList {
   font-size: 18px;
 }
@@ -25,6 +22,8 @@ body {
   bottom: 5px;
   right: 5px;
 }
+
+/*-----Home Page Corner Image------*/
 .pageCorner {
   max-width: 25%;
   max-height: 25%;
@@ -33,11 +32,61 @@ body {
   bottom: 0px;
 }
 
-/* Detail.js */
+
+/*------------Detail.js/Edit Note Page---------- */
+.form-container {
+  padding-left: 150px;
+}
+.editForm {
+  max-width: 75%;
+  padding: 25px;
+  margin: 15px;
+  background-color: rgb(184, 23, 103);
+  border-top: 1.5px solid rgba(224, 92, 136, 0.63);
+  border-right: 4.5px inset rgba(224, 92, 136, 0.63);
+  border-bottom: 5px outset rgba(167, 37, 117, 0.664);
+}
+
+.editLabel {
+  color: black;
+  font-size: 15px;
+}
+
+.backHome {
+  padding-bottom: 15px;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.editSaveButton {
+  font-size: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding-top: 3px;
+  padding-bottom: 5px;
+}
+
+.editPageCorner {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+} 
+
+.div-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.div-wrapper img {
+  margin-left: auto;
+  bottom: 0px;
+  right: 0px;
+}
 
 
-
-/* Calendar */
+/*-------------Calendar------------*/
 .rbc-calendar {
   background-color: white;
   font-size: 12px;
@@ -54,6 +103,7 @@ body {
   /* background-color: #a0f277; */
   /* background-color: #77bbf2; */
   background-color: #ef4df2;
+
 }
 
 /* .rbc-event {
