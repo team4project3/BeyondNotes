@@ -1,5 +1,9 @@
-.loginText {
-    color: #007bff;
+.form-group,
+.registerMessage,
+.exampleInputEmail1,
+.header
+{
+    color: #f72765;
     font-weight: bold;
     cursor: pointer;
 }
@@ -8,3 +12,11 @@
     color: green;
     font-weight: bold;
 }
+.loginText, 
+.text-muted
+ {
+    color: green;
+    font-weight: bold;
+    cursor: pointer;
+}
+

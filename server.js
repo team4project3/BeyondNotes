@@ -57,20 +57,24 @@ app.post('/api/upload', async (req, res) => {
       res.json({ uploadResponse });
   } catch (err) {
       console.error(err);
-      res.status(500).json({ err: 'Uh Oh Danger Sir Robinson Danger---> failed' });
+      res.status(500).json({ err: 'Uh Oh Dangerr---> failed' });
   }
 });
 
 
 // Add routes, both API and view
+
 routes(app)
 app.use(postRoutes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactcms");
+//mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactcms");
+mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://TravisMongoDB:MqBlpNquJAE37KUP@beyond-notes.gxtpt.mongodb.net/Beyond-Notes?retryWrites=true&w=majority");
 // mongoose.connect(MONGODB_URI);
 
+
 // Start the API server
+
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
