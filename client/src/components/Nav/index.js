@@ -36,15 +36,28 @@ export default function SideNavBar() {
               </div>
             </li>
 
-            <li><div className="divider" /></li>
+            {/* <li><div className="divider" /></li> */}
             <li><p className="lead center align black-text"><NavTime></NavTime></p></li>
             <li><div className="divider" /></li>
             <li><a href="/Home" className="active"><i class="material-icons">home</i>Home</a></li>
-            <li><a href="/upload" className="active">Upload</a> </li>   
-          <li><a href="/contacts" className="active">Contacts</a></li>
+            <li><a href="/upload" className="active"><i className="material-icons">cloud_upload</i>Upload</a> </li>   
+          <li><a href="/contacts" className="active"><i className="material-icons">contacts</i>Contacts</a></li>
           <li><a href="/login"><i className="material-icons">rotate_left</i>Logout</a></li>
+          
+          <br></br>
+          {/* <li><div className="divider" /></li> */}
+          <li className="black-text">
+            <div className="copyright">
+              
+                  Copyright © All rights reserved |   
+              
+            </div>
+          </li>
+
         </ul>
         <a href="#" data-target="slide-out" className="sidenav-trigger show-on-large"><i className="material-icons">menu</i></a>
+
+        
       </nav>
 
     </div>
