@@ -1,3 +1,4 @@
+//provides the welcome "email" message on the nav bar
 import React, { useEffect, useState } from 'react';
 import API from '../../utils/API';
 
@@ -34,7 +35,7 @@ console.log(users)
 
   return (
     <div>
-      <p>Welcome {users.username}</p>
+      <h6>Welcome {users.username}</h6>
     </div>
     
   );
