@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 // axios  is used to make API requests to the backend.
 import axios from 'axios';
-import './LoginForm.css';
 import { API_BASE_URL } from '../../constants/apiContants';
 import { withRouter } from "react-router-dom";
 
@@ -81,17 +80,42 @@ function LoginForm(props) {
         //  for sending a request to backend server
         //  and we can redirect the user to the home page.
         <>
-        <nav className="navbar navbar-dark bg-primary">
-            <div className="row col-12 d-flex">
-                <span className="h1">Beyond Notes!</span>
+        <div className="row">    
+            <div className="col s3"></div>
+            <div className="col s6">
+            <nav className="navbar grey z-depth-5">
+                    <div className="col s1"></div>
+                    <div className="col s10">
+                    <div className="flow-text">
+                        <span className="header">Beyond Notes!</span>
+                    </div>
+                    </div>
+                    <div className="col s1"></div>
+                </nav>
             </div>
-        </nav>
+            <div className="col s3"></div>
+        </div>
 
-        <div className="card col-12 col-lg-4 login-card mt-2 hv-center">
-            <form>
-                <div className="form-group">
-                    <label htmlFor="exampleInputEmail1">Login with Email address</label>
-                    <input type="email"
+
+        <div className="row">    
+                    <div className="col s3"></div>
+                    <div className="col s6">
+                    <div className="card grey z-depth-5">
+    
+            <form className="form-group">
+
+                <div className="row">    
+                    <div className="col s1"></div>
+                    <div className="col s10">
+                        <div htmlFor="exampleInputEmail1">Login with Email address</div>
+                    </div>
+                    <div className="col s1"></div>
+                </div>
+
+                <div className="row">
+                    <div className="col s1"></div>
+                    <div className="col s10">
+                        <input type="email"
                         className="form-control"
                         id="email"
                         aria-describedby="emailHelp"
@@ -99,10 +123,22 @@ function LoginForm(props) {
                         value={state.email}
                         onChange={handleChange}
                     />
-                    <small id="emailHelp" className="text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div className="col s1"></div>
+                    </div>
+
+                    <div class="row">
+                    <div className="col s1"></div>
+                    <div className="col s10">
+                        <small id="emailHelp" className="text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div className="col s1"></div>
                 </div>
-                <div className="form-group text-left">
-                    <label htmlFor="exampleInputPassword1">Password</label>
+
+                <div className="row">    
+                    <div className="col s1"></div>
+                    <div className="col s10">
+                    <div htmlFor="exampleInputPassword1">Password</div>
                     <input type="password"
                         className="form-control"
                         id="password"
@@ -110,24 +146,41 @@ function LoginForm(props) {
                         value={state.password}
                         onChange={handleChange}
                     />
+                    </div>
+                    <div className="col s1"></div>
                 </div>
-                <div className="form-check">
+
+                <div className="row">
+                    <div className="col s5"></div>
+                    <div className="col s2">
+                        <button
+                        type="submit"
+                        className="btn btn-primary"
+                        onClick={handleSubmitClick}
+                        >Submit</button>
+                    </div>
+                    <div className="col s5"></div>
                 </div>
-                <button
-                    type="submit"
-                    className="btn btn-primary"
-                    onClick={handleSubmitClick}
-                >Submit</button>
+
             </form>
-            <div className="alert alert-success mt-2" style={{ display: state.successMessage ? 'block' : 'none' }} role="alert">
-                {state.successMessage}
-            </div>
-            <div className="registerMessage">
-                <span>Dont have an account? </span>
-                <span className="loginText" onClick={() => redirectToRegister()}>Register</span>
+            <div class="row">
+                <div className="col s1"></div>
+                <div className="col s10">
+                    <div className="registerMessage">
+                        <span>Dont have an account? </span>
+                        <span className="loginText" onClick={() => redirectToRegister()}>Register</span>
+                    </div>
+                </div>
+                <div className="col s1"></div>
             </div>
         </div>
+        
+        </div>
+        <div className="col s3"></div>
+        </div>
         </>
+        
+        
     )
 }
 
