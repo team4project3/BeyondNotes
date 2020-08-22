@@ -30,7 +30,7 @@ export default function SideNavBar() {
                   
                 </div>
                 <a href="/upload"><ImageUpload></ImageUpload></a>                
-                <a href="#email"><span className="member-name green-text email"> <WelcomeMessage></WelcomeMessage></span></a>                
+                <a href="#email"><span className="member-name black-text email"> <WelcomeMessage></WelcomeMessage></span></a>                
               </div>
             </li>
 

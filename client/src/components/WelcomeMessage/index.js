@@ -31,7 +31,7 @@ console.log(users)
 
   return (
     <div>
-      <h6>Welcome {users.username}</h6>
+      <p>Welcome! {users.username}</p>
     </div>
     
   );
