@@ -1,0 +1,10 @@
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+}
+
+.navSpan {
+    padding-left: 1rem;
+}
+
