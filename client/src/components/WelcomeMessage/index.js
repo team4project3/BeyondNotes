@@ -7,13 +7,9 @@ const User = () => {
     username: ""
   });
 
-  // async function getUsers() {
-  //   const response = await fetch('/api/user_data');
-  //   const users = await response.json();
-  //   setUsers(users);
-  // }
+  
 
-
+//fetching data from api
   const fetchData = async () => {
     try {
         const response = await fetch('/api/user_data');

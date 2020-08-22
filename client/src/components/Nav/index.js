@@ -6,9 +6,7 @@ import NavTime from './NavTime'
 import ImageUpload from '../ImageUpload';
 import { Image } from 'cloudinary-react';
 import WelcomeMessage from "../WelcomeMessage"
-import { useStoreContext } from '../../utils/GlobalState';
-import { GET_USERNAME } from '../../utils/actions';
-import { PromiseProvider } from 'mongoose';
+
 
 
 
@@ -36,7 +34,7 @@ export default function SideNavBar() {
               </div>
             </li>
 
-            {/* <li><div className="divider" /></li> */}
+            
             <li><p className="lead center align black-text"><NavTime></NavTime></p></li>
             <li><div className="divider" /></li>
             <li><a href="/Home" className="active"><i class="material-icons">home</i>Home</a></li>
