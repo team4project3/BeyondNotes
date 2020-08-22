@@ -87,7 +87,7 @@ function LoginForm(props) {
                     <div className="col s1"></div>
                     <div className="col s10">
                     <div className="flow-text">
-                        <span className="header">Beyond Notes!</span>
+                        <span id="title" className="header">Beyond Notes!</span>
                     </div>
                     </div>
                     <div className="col s1"></div>
@@ -157,6 +157,7 @@ function LoginForm(props) {
                         type="submit"
                         className="btn btn-primary"
                         onClick={handleSubmitClick}
+                        className=" orange lighten-2"
                         >Submit</button>
                     </div>
                     <div className="col s5"></div>

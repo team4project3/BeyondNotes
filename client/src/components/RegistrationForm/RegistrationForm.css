@@ -6,8 +6,12 @@
     color: #f72765;
     font-weight: bold;
     cursor: pointer;
+   
 }
 
+.flow-text{
+    text-align: center;
+}
 .successMessage {
     color: green;
     font-weight: bold;
