@@ -58,7 +58,12 @@ export default function Upload() {
         <>
         <Nav/>
         <br></br>
-        <div className="card-panel m9 grey darken-2">
+        <br></br>
+        <br></br>
+        <br></br>
+        <div class="row">
+        <div class="col s12 m4 l2"><p></p></div>
+        <div className="card-panel col s12 m4 l8 grey darken-2">
             <h1 className="title green-text">Upload an Image</h1>
             <Alert msg={errMsg} type="danger" />
             <Alert msg={successMsg} type="success" />
@@ -83,6 +88,8 @@ export default function Upload() {
                     style={{ height: '300px' }}
                 />
             )}
+        </div>
+        <div class="col s12 m4 l2"><p></p></div>
         </div>
     </>
     );
