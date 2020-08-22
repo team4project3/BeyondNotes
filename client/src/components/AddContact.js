@@ -137,6 +137,7 @@ export const ContactForm = styled.form`
   color: black;
   width: 50%;
   justify-content: center;
+  box-shadow: 10px 10px 5px rgba(78, 46, 31, 0.5);
 
   svg {
     margin-top: 10px;
@@ -160,6 +161,7 @@ export const ContactForm = styled.form`
 
   #form-add label {
     margin-left: 1.8em;
+    
   }
 
   input {
@@ -173,6 +175,7 @@ export const ContactForm = styled.form`
 
   #default-img {
     width: auto;
+    font-size: 20px;
     padding: 0.4em;
     background: lightgreen;
     border-radius: 4px;
@@ -189,7 +192,7 @@ const ContactButton = styled.button`
   margin: 0 1em;
   background: ${props => props.color};
   padding: 0.5em;
-  border-radius: px;
+  border-radius: 4px;
   &:hover {
     cursor: pointer;
   }
