@@ -1,9 +1,11 @@
 .noteListContent {
-    /* background-color: darkolivegreen; */
+    border-right: 4.5px outset rgba(250, 153, 43, 0.712);
+    border-bottom: 4.5px outset rgba(151, 71, 25, 0.664);
     background-color: darkorange;
 }
 
 .emptyNoteList {
     text-align: center;
     font-weight: lighter;
+    font-family: 'Permanent Marker', cursive;
 }

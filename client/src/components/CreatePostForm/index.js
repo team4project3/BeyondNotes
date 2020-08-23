@@ -29,6 +29,7 @@ function CreatePostForm() {
           type: ADD_POST,
           post: result.data
         });
+        console.log(result);
       })
       .catch(err => console.log(err));
 
@@ -42,7 +43,7 @@ function CreatePostForm() {
 
       <div className="card orange z-depth-3">
         <div className="card-content">
-          <span className="card-title noteBox">Need to Add a Note?</span>
+          <span className="noteBoxTitle">Need to Add a Note?</span>
           <form className="form-group mt-3 mb-3 formBox" onSubmit={handleSubmit}>
             <input className="form-control mb-3" required ref={titleRef} placeholder="Title" />
             <textarea className="form-control mb-3 bodyPlaceholder" required ref={bodyRef} placeholder="Body" />
