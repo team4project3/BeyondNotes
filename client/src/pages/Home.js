@@ -21,7 +21,7 @@ const Home = () => {
           <div className="col m4 s6">
             <div className="card z-depth-3">
               <div className="card-content magentaCard z-depth-4">
-                <h5>What's on the Agenda Today? </h5>
+                <h5 className="agendaH5">What's on the Agenda Today? </h5>
                 <div className="card-action">
                   <div className="mt-5 homeList">
                     <Link to="calendar">&#8226; Calendar</Link>

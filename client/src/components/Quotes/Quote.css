@@ -60,12 +60,12 @@ body {
     margin: 20px;
     position: relative;
     /* border-radius: 5px; */
-    height: 35px;
-    width: 100px;
+    /* height: 35px;
+    width: 100px; */
     /* font-weight: bold; */
-    font-family: "Segoe UI", "Tahoma", "Geneva", "Verdana", sans-serif;
+    font-family: 'Permanent Marker', cursive;
     color: black;
-    font-size: 16px;
+    font-size: 25px;
   }
   
   
