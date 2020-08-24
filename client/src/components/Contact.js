@@ -98,7 +98,8 @@ const ContactContainer = styled.div`
   padding: 0.5em;
   background: whitesmoke;
   border: 1px solid black;
-
+  font-family: 'Permanent Marker', cursive;
+  box-shadow: 10px 10px 5px rgba(78, 46, 31, 0.5);
   width: 80%;
   border-radius: 5px;
   color: black;
@@ -132,11 +133,13 @@ const ContactContainer = styled.div`
     #remove {
       background: #eb8334;
       font-size: 14px;
+      font-family: 'Permanent Marker', cursive;
     }
 
     #edit {
-      background: #eb349b;
+      background: #c70a74;
       font-size: 14px;
+      font-family: 'Permanent Marker', cursive;
     }
   }
 `;

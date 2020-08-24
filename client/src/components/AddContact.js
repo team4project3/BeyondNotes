@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { Consumer } from "./ContactsContext";
 import Icon from "./elements/Icon";
 
+const contacts = JSON.parse(localStorage.getItem("contacts")) || [];
+
 export default class AddContact extends Component {
   state = {
     id: Math.round(Math.random() * 100000000),
@@ -48,11 +50,18 @@ export default class AddContact extends Component {
     this.setState({
       [e.target.name]: e.target.value
     });
+  
+  
   };
   handleSubmit = (e, action) => {
     e.preventDefault();
     this.contactForm.reset();
     action(this.state);
+
+    
+
+    contacts.push(this.state)
+      localStorage.setItem("contacts", JSON.stringify(contacts));
   };
 
   render() {
@@ -129,6 +138,7 @@ export default class AddContact extends Component {
 }
 
 export const ContactForm = styled.form`
+font-family: 'Permanent Marker', cursive;
   margin: 1.5em auto;
   padding: 1em;
   border: 2px solid black;
@@ -137,19 +147,16 @@ export const ContactForm = styled.form`
   color: black;
   width: 50%;
   justify-content: center;
-  box-shadow: 10px 10px 5px rgba(78, 46, 31, 0.5);
-
+  box-shadow: 10px 10px 5px rgba(78, 46, 31, 0.85);
   svg {
     margin-top: 10px;
     &:hover {
       cursor: pointer;
     }
   }
-
   h1 {
     text-align: center;
   }
-
   #form-add,
   #form-edit {
     margin: 0 auto;
@@ -158,12 +165,10 @@ export const ContactForm = styled.form`
     color: black;
     // text-decoration-color: black;
   }
-
   #form-add label {
     margin-left: 1.8em;
     
   }
-
   input {
     display: block;
     margin: 1.5em auto;
@@ -172,10 +177,11 @@ export const ContactForm = styled.form`
     color: black;
     
   }
-
   #default-img {
     width: auto;
+    height: fixed;
     font-size: 20px;
+    font-family: 'Permanent Marker', cursive;
     padding: 0.4em;
     background: lightgreen;
     border-radius: 4px;
@@ -187,6 +193,7 @@ export const ContactForm = styled.form`
 `;
 
 const ContactButton = styled.button`
+  font-family: 'Permanent Marker', cursive;
   width: 120px;
   display: inline-block;
   margin: 0 1em;

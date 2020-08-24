@@ -49,8 +49,8 @@ const ContactsContainer = styled.div`
   margin: 0 auto;
   color: whitesmoke;
   padding: 1.5em;
-  background: #de6ce0;
-  box-shadow: 10px 10px 5px rgba(78, 46, 31, 0.5);
+  background: #5da7e3;
+  box-shadow: 10px 10px 5px rgba(78, 46, 31, 0.85);
 
   #contacts {
     display: grid;
@@ -62,20 +62,24 @@ const ContactsHeader = styled.div`
   margin: 1.5em auto;
   text-align: center;
   border: 2px solid border;
+  font-family: 'Permanent Marker', cursive;
 `;
 
 export const Button = styled.button`
-  background: lightslategray;
+  background: #f58e07;
   color: whitesmoke;
   padding: 0.7em;
   width: 15%;
-  box-shadow: 10px 10px 5px rgba(78, 46, 31, 0.5);
-  border:  1px solid black;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 20px;
+  color: black;
+  box-shadow: 10px 10px 5px rgba(78, 46, 31, 0.71);
+  border: 1px solid black;
   border-radius: 4px;
   display: block;
   margin: 1em auto;
   &:hover {
-    background: hsl(0, 100%, 71%);
+    background: #c70a74;
     color: whitesmoke;
     cursor: pointer;
   }
