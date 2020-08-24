@@ -48,7 +48,7 @@ function App() {
 
             <Route exact path="/calendar" component={Calendar} />
             <Route exact path="/posts/:id" component={Detail} />
-            {/* <Route exact path="/notelist" component={NoteList} /> */}
+
 
             <Route component={Upload} path="/upload" />
 

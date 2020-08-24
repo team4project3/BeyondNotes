@@ -99,11 +99,11 @@ function RegistrationForm(props) {
         <div className="row">    
             <div className="col s3"></div>
             <div className="col s6">
-                <nav className="navbar grey z-depth-3">
+                <nav className="navbar grey darken-2 z-depth-3">
                     <div className="col s1"></div>
                     <div className="col s10">
                     <div className="flow-text">
-                        <span className="header">Beyond Notes!</span>
+                        <span id="title" className="header">Beyond Notes!</span>
                     </div>
                     </div>
                     <div className="col s1"></div>
@@ -115,14 +115,14 @@ function RegistrationForm(props) {
         <div className="row">    
                     <div className="col s3"></div>
                     <div className="col s6">
-                    <div className="card grey z-depth-3">
+                    <div className="card grey darken-2 z-depth-3">
 
             <form className="form-group">
 
                 <div className="row">    
                     <div className="col s1"></div>
                     <div className="col s10">
-                        <div htmlFor="exampleInputEmail1">Register with Email address</div>
+                        <div htmlFor="exampleInputEmail1">Register with Email address</div>                        
                     </div>
                     <div className="col s1"></div>
                 </div>
@@ -187,6 +187,7 @@ function RegistrationForm(props) {
                             type="submit" 
                             className="btn btn-primary"
                             onClick={handleSubmitClick}
+                            className=" orange lighten-2"
                         >Register</button>
                     </div>
                     <div className="col s5"></div>

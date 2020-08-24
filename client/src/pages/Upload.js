@@ -57,20 +57,30 @@ export default function Upload() {
     return (
         <>
         <Nav/>
-        <div>
-            <h1 className="title">Upload an Image</h1>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <div class="row">
+        <div class="col s12 m4 l2"><p></p></div>
+        <div className="card-panel col s12 m4 l8 grey darken-2">
+            <h1 className="title lead center align green-text">Upload an Image</h1>
+            <br></br>
+            <hr></hr>
+            <br></br>
             <Alert msg={errMsg} type="danger" />
             <Alert msg={successMsg} type="success" />
-            <form onSubmit={handleSubmitFile} className="form">
+            <form onSubmit={handleSubmitFile} className="form lead center align">
                 <input
                     id="fileInput"
                     type="file"
                     name="image"
-                    onChange={handleFileInputChange}
+                    onChange={handleFileInputChange}                
                     value={fileInputState}
                     className="form-input"
+                    
                 />
-                <button className="btn" type="submit">
+                <button className="btn lead center align orange lighten-2" type="submit">
                     Submit
                 </button>
             </form>
@@ -81,6 +91,8 @@ export default function Upload() {
                     style={{ height: '300px' }}
                 />
             )}
+        </div>
+        <div class="col s12 m4 l2"><p></p></div>
         </div>
     </>
     );

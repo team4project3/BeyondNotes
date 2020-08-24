@@ -1,3 +1,4 @@
+//provides the welcome "email" message on the nav bar
 import React, { useEffect, useState } from 'react';
 import API from '../../utils/API';
 
@@ -6,13 +7,9 @@ const User = () => {
     username: ""
   });
 
-  // async function getUsers() {
-  //   const response = await fetch('/api/user_data');
-  //   const users = await response.json();
-  //   setUsers(users);
-  // }
+  
 
-
+//fetching data from api
   const fetchData = async () => {
     try {
         const response = await fetch('/api/user_data');
@@ -34,7 +31,7 @@ console.log(users)
 
   return (
     <div>
-      <p>Welcome {users.username}</p>
+      <p>Welcome! {users.username}</p>
     </div>
     
   );
