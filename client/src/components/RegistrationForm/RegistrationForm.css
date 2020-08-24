@@ -3,24 +3,51 @@
 .exampleInputEmail1,
 .header
 {
-    color: #f72765;
-    font-weight: bold;
+    color: rgb(51, 139, 51);
     cursor: pointer;
-   
+    font-family: 'Permanent Marker', cursive;
+    font-weight: lighter;
+}
+
+.beyondNotes {
+    color: #e94475;
+    cursor: pointer;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: lighter;
+    font-size: 40px;
+}
+
+#emailHelp {
+    font-size: 25px;
+    color: #e94475;
+
 }
 
 .flow-text{
     text-align: center;
 }
 .successMessage {
-    color: green;
-    font-weight: bold;
+    color: rgb(26, 114, 26);
+    font-weight: lighter;
 }
 .loginText, 
 .text-muted
  {
-    color: green;
-    font-weight: bold;
+    color: #e94475;
+    font-weight: lighter;
     cursor: pointer;
+    font-family: 'Permanent Marker', cursive;
+
+}
+
+.registerButton,
+.loginButton{
+    font-family: 'Permanent Marker', cursive;
+}
+
+.donthaveaccount,
+.haveaccount {
+    font-family: 'Permanent Marker', cursive;
+    color: rgb(51, 139, 51);
 }
 
