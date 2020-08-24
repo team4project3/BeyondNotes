@@ -48,8 +48,8 @@ Beyond Notes is designed for anyone who is looking for an organizational tool to
 ```Testing not implemented at this time.```
 
 ## Questions?Contact:
-* Cherly Daniels [cheryld433](`https://github.com/cheryld433`)
-* Ashley Feese [AFeese](`https://github.com/AFeese`)
-* Malesha Jones [Jones-M12](`https://github.com/Jones-M12`)
-* Travis Lovingood [TravisLovingood](`https://github.com/TravisLovingood`)
+* Cheryl Daniels [cheryld433](https://github.com/cheryld433)
+* Ashley Feese [AFeese](https://github.com/AFeese)
+* Malesha Jones [Jones-M12](https://github.com/Jones-M12)
+* Travis Lovingood [TravisLovingood](https://github.com/TravisLovingood)
 
