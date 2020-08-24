@@ -52,7 +52,7 @@ const Detail = props => {
           <Row>
             <div className="col m2 s2" />
             <div className="container form-container">
-              <div className="col m8 s8 editForm">
+              <div className="col m8 s8 editForm z-depth-3">
 
                 <div className="form-group">
                   <label className="editLabel" htmlFor="display_name">Title:</label>
@@ -81,25 +81,20 @@ const Detail = props => {
                   <div className="div-wrapper">
                     <img className="editPageCorner" src={EditPageCorner} alt="page corner"></img>
                   </div>
-
-                  {/* <Link to="/home" className="backHome">← Back to Dashboard Home</Link> */}
                 </div>
-                {/* <div className="div-wrapper">
-                  <img className="editPageCorner" src={EditPageCorner} alt="page corner"></img>
-                </div> */}
               </div>
-
             </div>
-
             <div className="col m2 s2" />
           </Row>
-
           <Row>
-            <Col size="md-12" className="backHome">
-              <Link to="/home">← Back to Dashboard Home</Link>
+          <Col size="s-3 md-3" />
+            <Col size="s-6 md-6">
+              <Link to="/home" className="backDashboard z-index-3">← Back to Home</Link>
             </Col>
+            <Col size="s-3 md-3" />
           </Row>
         </form>
+
       </Container>
       {/* ) : (
            <div>Test</div>
