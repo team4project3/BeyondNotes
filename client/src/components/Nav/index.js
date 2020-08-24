@@ -12,15 +12,16 @@ import WelcomeMessage from "../WelcomeMessage"
 
 export default function SideNavBar() {
 
-  document.addEventListener('DOMContentLoaded', function () {
-    var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems, {});
-  });
+  // document.addEventListener('DOMContentLoaded', function () {
+  //   var elems = document.querySelectorAll('.sidenav');
+  //   var instances = M.Sidenav.init(elems, {});
+  // });
 
 
 
   return (
-    <div>
+    <>
+    
       <nav className="grey darken-2 navBar"><span className="navSpan">More Than Just A Note ...Beyond Notes!</span>
       <ul id="slide-out" className="sidenav">
             <li>
@@ -62,7 +63,8 @@ export default function SideNavBar() {
         
       </nav>
 
-    </div>
+    
+    </>
   )
 
 }
