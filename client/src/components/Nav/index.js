@@ -22,7 +22,7 @@ export default function SideNavBar() {
   return (
     <>
     
-      <nav className="grey darken-2 navBar"><span className="navSpan">More Than Just A Note ...Beyond Notes!</span>
+      <nav className="grey darken-2 navBar navBarFont"><span className="navSpan">More Than Just A Note ...Beyond Notes!</span>
       <ul id="slide-out" className="sidenav">
             <li>
               <div className="user-view">
