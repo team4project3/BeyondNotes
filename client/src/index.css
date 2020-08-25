@@ -106,22 +106,43 @@ body {
 
 /*-------------Calendar------------*/
 .rbc-calendar {
-  background-color: white;
+  background-color: rgb(247, 239, 239);
   font-size: 12px;
+  font-family: 'Permanent Marker', cursive;
   font-weight: bold;
-  box-shadow: 10px 10px 5px rgba(78, 46, 31, 0.5);
-  
+  box-shadow: 10px 10px 5px rgba(78, 46, 31, 1.10);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .rbc-event-content {
   background-color: orange;
-}
+  color: black;
+  box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.2), 
+             0 0  0 2px orange,
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
 
+}
 .rbc-btn-group {
   /* background-color: #a0f277; */
-  /* background-color: #77bbf2; */
-  background-color: #ef4df2;
+  /* font-family: 'Permanent Marker', cursive; */
+  background-color: #77bbf2;
+  /* background-color: #ef4df2; */
+  /* padding: 20px; */
+  /* box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1), 
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3); */
 
+}
+
+.rbc-toolbar button {
+  font-family: 'Permanent Marker', cursive;
+  box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1), 
+             0 0  0 1px rgb(255,255,2),
+             0.3em 0.3em 1em rgba(0,0,0,0.75);
 }
 
 /* .rbc-event {

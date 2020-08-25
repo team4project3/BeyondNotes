@@ -28,6 +28,7 @@ const ContactContainer = styled.div`
   padding: 1em;
   font-size: 1.5em;
   text-align: center;
+  font-family: 'Permanent Marker', cursive;
 
   input {
     width: 90%;
