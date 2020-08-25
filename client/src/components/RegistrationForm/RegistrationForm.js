@@ -61,7 +61,7 @@ function RegistrationForm(props) {
             props.showError('Please enter valid username and password')    
         }
 
-// Redirects the user to the Home page  
+// Redirects the user to the Home page to login to get user email welcome message to display
     }
     const redirectToHome = () => {
         props.updateTitle('Login')
