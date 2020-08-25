@@ -10,6 +10,7 @@ import WelcomeMessage from "../WelcomeMessage"
 
 
 
+
 export default function SideNavBar() {
 
   // document.addEventListener('DOMContentLoaded', function () {
@@ -20,8 +21,6 @@ export default function SideNavBar() {
 
 
   return ( 
-    <>
-   
     
 
       <nav className="grey darken-2 navBar"><span className="navSpan" style={{fontFamily:"Permanent Marker, cursive"}}>More Than Just A Note ...Beyond Notes! </span>
@@ -33,7 +32,7 @@ export default function SideNavBar() {
                   
                 </div>
                 <a href="/upload"><ImageUpload></ImageUpload></a>                
-                <a href="#email"><span className="member-name black-text email"> <WelcomeMessage></WelcomeMessage></span></a>                
+                <a href="#email"><span className="member-name black-text email"> <WelcomeMessage></WelcomeMessage> </span></a>                
               </div>
             </li>
 
