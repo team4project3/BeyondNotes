@@ -64,8 +64,8 @@ function RegistrationForm(props) {
 // Redirects the user to the Home page  
     }
     const redirectToHome = () => {
-        props.updateTitle('Home')
-        props.history.push('/home');
+        props.updateTitle('Login')
+        props.history.push('/login');
     }
 
 // Redirects the user to the login page 
