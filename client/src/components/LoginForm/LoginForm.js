@@ -87,7 +87,7 @@ function LoginForm(props) {
                     <div className="col s1"></div>
                     <div className="col s10">
                     <div className="flow-text">
-                        <span id="title" className="header">Beyond Notes!</span>
+                        <span id="title" className="header beyondNotes">Beyond Notes!</span>
                     </div>
                     </div>
                     <div className="col s1"></div>
@@ -157,7 +157,7 @@ function LoginForm(props) {
                         type="submit"
                         className="btn btn-primary"
                         onClick={handleSubmitClick}
-                        className=" orange lighten-2"
+                        className=" orange lighten-2 loginButton"
                         >Submit</button>
                     </div>
                     <div className="col s5"></div>
@@ -168,7 +168,7 @@ function LoginForm(props) {
                 <div className="col s1"></div>
                 <div className="col s10">
                     <div className="registerMessage">
-                        <span>Dont have an account? </span>
+                        <span className="donthaveaccount">Dont have an account? </span>
                         <span className="loginText" onClick={() => redirectToRegister()}>Register</span>
                     </div>
                 </div>
