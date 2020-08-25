@@ -19,10 +19,11 @@ export default function SideNavBar() {
 
 
 
-  return (
+  return ( 
     <>
+    {}
     
-      <nav className="grey darken-2 navBar"><span className="navSpan">More Than Just A Note ...Beyond Notes!</span>
+      <nav className="grey darken-2 navBar"><span className="navSpan" style={{fontFamily:"Permanent Marker, cursive"}}>More Than Just A Note ...Beyond Notes! </span>
       <ul id="slide-out" className="sidenav">
             <li>
               <div className="user-view">
