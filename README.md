@@ -27,7 +27,7 @@
 * [QUESTIONS?CONTACT](#questions?contact)
 
 
-## UserStory :
+## User Story :
 * AS A person with a busy schedule, time management plays an important role. 
 * I WANT an application where I can add my thoughts or notes, schedule my events and tasks, and create my own profile to log into 
 * SO THAT I can be more productive with my work team, personal schedule, or events. 
@@ -40,6 +40,17 @@
 
 ## Usage: 
 Beyond Notes is designed for anyone who is looking for an organizational tool to store notes, organize and plan events, and save the information to their profile. 
+
+![BeyondNotes Login](./client/public/assets/BeyondNotesRegLogin.gif)
+
+![BeyondNotes NavBar](./client/public/assets/BeyondNotes-Nav.gif)
+
+![BeyondNotes Quotes](./client/public/assets/BeyondNotes-Quotes.gif)
+
+![BeyondNotes Add/Edit/Delete Notes](./client/public/assets/BeyondNotes-Add_Edit_DeleteNotes.gif)
+
+![BeyondNotes Calendar](./client/public/assets/BeyondNotes-Calendar.gif)
+
 
 ## License: 
 ![License](https://img.shields.io/badge/License-MIT-blue.svg?style=plastic)
