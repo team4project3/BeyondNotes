@@ -68,8 +68,8 @@ routes(app)
 app.use(postRoutes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactcms");
-
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactcms");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://team4:project3team4@ds115472.mlab.com:15472/heroku_pc46vxpz");
 //mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://TravisMongoDB:MqBlpNquJAE37KUP@beyond-notes.gxtpt.mongodb.net/Beyond-Notes?retryWrites=true&w=majority");
 
 
