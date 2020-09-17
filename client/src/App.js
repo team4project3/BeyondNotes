@@ -14,13 +14,6 @@ import AddContact from "./components/AddContact";
 import EditContact from "./components/EditContact";
 import ContactsContextProvider from "./components/ContactsContextProvider";
 import "./App.css";
-// import Quotes from "../src/components/Quotes/Quote.js";
-// import NoteList from "./pages/NoteList";
-// import Gallery from './pages/Gallery.js';
-// import Header from './components/Header/Header';
-
-
-
 
 function App() {
   const [title, updateTitle] = useState(null);
