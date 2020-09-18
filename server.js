@@ -68,7 +68,8 @@ routes(app)
 app.use(postRoutes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactcms");
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactcms");
+mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://ashleyfeese@outlook.com:tsxD74CnTFkfd8b@cluster-pc46vxpz.dw5fl.mongodb.net/heroku_pc46vxpz?retryWrites=true&w=majority");
 // mongoose.connect(process.env.MONGODB_URI || "mongodb://team4:project3team4@ds115472.mlab.com:15472/heroku_pc46vxpz");
 // mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://ashleyfeese@outlook.com:tsxD74CnTFkfd8b@cluster-pc46vxpz.dw5fl.mongodb.net/heroku_pc46vxpz?retryWrites=true&w=majority");
 //mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://TravisMongoDB:MqBlpNquJAE37KUP@beyond-notes.gxtpt.mongodb.net/Beyond-Notes?retryWrites=true&w=majority");
